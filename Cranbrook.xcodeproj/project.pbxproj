@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1927B1B520312A4D007E7099 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B420312A4D007E7099 /* LoginController.swift */; };
+		198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE21F54769600255D29 /* AppDelegate.swift */; };
+		198E7EE51F54769600255D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE41F54769600255D29 /* ViewController.swift */; };
+		198E7EE81F54769600255D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE61F54769600255D29 /* Main.storyboard */; };
+		198E7EEA1F54769600255D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE91F54769600255D29 /* Assets.xcassets */; };
+		198E7EED1F54769600255D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */; };
+		198E7EF81F54769600255D29 /* CranbrookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EF71F54769600255D29 /* CranbrookTests.swift */; };
+		198E7F031F54769600255D29 /* CranbrookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7F021F54769600255D29 /* CranbrookUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		198E7EF41F54769600255D29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198E7ED71F54769600255D29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 198E7EDE1F54769600255D29;
+			remoteInfo = Cranbrook;
+		};
+		198E7EFF1F54769600255D29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198E7ED71F54769600255D29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 198E7EDE1F54769600255D29;
+			remoteInfo = Cranbrook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1927B1B420312A4D007E7099 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		198E7EDF1F54769600255D29 /* Cranbrook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cranbrook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		198E7EE21F54769600255D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		198E7EE41F54769600255D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		198E7EE71F54769600255D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		198E7EE91F54769600255D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		198E7EEC1F54769600255D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		198E7EEE1F54769600255D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		198E7EF31F54769600255D29 /* CranbrookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CranbrookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		198E7EF71F54769600255D29 /* CranbrookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CranbrookTests.swift; sourceTree = "<group>"; };
+		198E7EF91F54769600255D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		198E7EFE1F54769600255D29 /* CranbrookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CranbrookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		198E7F021F54769600255D29 /* CranbrookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CranbrookUITests.swift; sourceTree = "<group>"; };
+		198E7F041F54769600255D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		198E7EDC1F54769600255D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198E7EF01F54769600255D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198E7EFB1F54769600255D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		198E7ED61F54769600255D29 = {
+			isa = PBXGroup;
+			children = (
+				198E7EE11F54769600255D29 /* Cranbrook */,
+				198E7EF61F54769600255D29 /* CranbrookTests */,
+				198E7F011F54769600255D29 /* CranbrookUITests */,
+				198E7EE01F54769600255D29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		198E7EE01F54769600255D29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				198E7EDF1F54769600255D29 /* Cranbrook.app */,
+				198E7EF31F54769600255D29 /* CranbrookTests.xctest */,
+				198E7EFE1F54769600255D29 /* CranbrookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		198E7EE11F54769600255D29 /* Cranbrook */ = {
+			isa = PBXGroup;
+			children = (
+				198E7EE21F54769600255D29 /* AppDelegate.swift */,
+				198E7EE41F54769600255D29 /* ViewController.swift */,
+				198E7EE61F54769600255D29 /* Main.storyboard */,
+				198E7EE91F54769600255D29 /* Assets.xcassets */,
+				198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */,
+				198E7EEE1F54769600255D29 /* Info.plist */,
+				1927B1B420312A4D007E7099 /* LoginController.swift */,
+			);
+			path = Cranbrook;
+			sourceTree = "<group>";
+		};
+		198E7EF61F54769600255D29 /* CranbrookTests */ = {
+			isa = PBXGroup;
+			children = (
+				198E7EF71F54769600255D29 /* CranbrookTests.swift */,
+				198E7EF91F54769600255D29 /* Info.plist */,
+			);
+			path = CranbrookTests;
+			sourceTree = "<group>";
+		};
+		198E7F011F54769600255D29 /* CranbrookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				198E7F021F54769600255D29 /* CranbrookUITests.swift */,
+				198E7F041F54769600255D29 /* Info.plist */,
+			);
+			path = CranbrookUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		198E7EDE1F54769600255D29 /* Cranbrook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 198E7F071F54769600255D29 /* Build configuration list for PBXNativeTarget "Cranbrook" */;
+			buildPhases = (
+				198E7EDB1F54769600255D29 /* Sources */,
+				198E7EDC1F54769600255D29 /* Frameworks */,
+				198E7EDD1F54769600255D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cranbrook;
+			productName = Cranbrook;
+			productReference = 198E7EDF1F54769600255D29 /* Cranbrook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		198E7EF21F54769600255D29 /* CranbrookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 198E7F0A1F54769600255D29 /* Build configuration list for PBXNativeTarget "CranbrookTests" */;
+			buildPhases = (
+				198E7EEF1F54769600255D29 /* Sources */,
+				198E7EF01F54769600255D29 /* Frameworks */,
+				198E7EF11F54769600255D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				198E7EF51F54769600255D29 /* PBXTargetDependency */,
+			);
+			name = CranbrookTests;
+			productName = CranbrookTests;
+			productReference = 198E7EF31F54769600255D29 /* CranbrookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		198E7EFD1F54769600255D29 /* CranbrookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 198E7F0D1F54769600255D29 /* Build configuration list for PBXNativeTarget "CranbrookUITests" */;
+			buildPhases = (
+				198E7EFA1F54769600255D29 /* Sources */,
+				198E7EFB1F54769600255D29 /* Frameworks */,
+				198E7EFC1F54769600255D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				198E7F001F54769600255D29 /* PBXTargetDependency */,
+			);
+			name = CranbrookUITests;
+			productName = CranbrookUITests;
+			productReference = 198E7EFE1F54769600255D29 /* CranbrookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		198E7ED71F54769600255D29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Chase Norman";
+				TargetAttributes = {
+					198E7EDE1F54769600255D29 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8GN67288KC;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					198E7EF21F54769600255D29 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8GN67288KC;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 198E7EDE1F54769600255D29;
+					};
+					198E7EFD1F54769600255D29 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8GN67288KC;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 198E7EDE1F54769600255D29;
+					};
+				};
+			};
+			buildConfigurationList = 198E7EDA1F54769600255D29 /* Build configuration list for PBXProject "Cranbrook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 198E7ED61F54769600255D29;
+			productRefGroup = 198E7EE01F54769600255D29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				198E7EDE1F54769600255D29 /* Cranbrook */,
+				198E7EF21F54769600255D29 /* CranbrookTests */,
+				198E7EFD1F54769600255D29 /* CranbrookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		198E7EDD1F54769600255D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198E7EED1F54769600255D29 /* LaunchScreen.storyboard in Resources */,
+				198E7EEA1F54769600255D29 /* Assets.xcassets in Resources */,
+				198E7EE81F54769600255D29 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198E7EF11F54769600255D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198E7EFC1F54769600255D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		198E7EDB1F54769600255D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198E7EE51F54769600255D29 /* ViewController.swift in Sources */,
+				1927B1B520312A4D007E7099 /* LoginController.swift in Sources */,
+				198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198E7EEF1F54769600255D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198E7EF81F54769600255D29 /* CranbrookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198E7EFA1F54769600255D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198E7F031F54769600255D29 /* CranbrookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		198E7EF51F54769600255D29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 198E7EDE1F54769600255D29 /* Cranbrook */;
+			targetProxy = 198E7EF41F54769600255D29 /* PBXContainerItemProxy */;
+		};
+		198E7F001F54769600255D29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 198E7EDE1F54769600255D29 /* Cranbrook */;
+			targetProxy = 198E7EFF1F54769600255D29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		198E7EE61F54769600255D29 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				198E7EE71F54769600255D29 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				198E7EEC1F54769600255D29 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		198E7F051F54769600255D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		198E7F061F54769600255D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		198E7F081F54769600255D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8GN67288KC;
+				INFOPLIST_FILE = Cranbrook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.Cranbrook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		198E7F091F54769600255D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8GN67288KC;
+				INFOPLIST_FILE = Cranbrook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.Cranbrook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		198E7F0B1F54769600255D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8GN67288KC;
+				INFOPLIST_FILE = CranbrookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.CranbrookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cranbrook.app/Cranbrook";
+			};
+			name = Debug;
+		};
+		198E7F0C1F54769600255D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8GN67288KC;
+				INFOPLIST_FILE = CranbrookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.CranbrookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cranbrook.app/Cranbrook";
+			};
+			name = Release;
+		};
+		198E7F0E1F54769600255D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8GN67288KC;
+				INFOPLIST_FILE = CranbrookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.CranbrookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Cranbrook;
+			};
+			name = Debug;
+		};
+		198E7F0F1F54769600255D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8GN67288KC;
+				INFOPLIST_FILE = CranbrookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.CranbrookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Cranbrook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		198E7EDA1F54769600255D29 /* Build configuration list for PBXProject "Cranbrook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				198E7F051F54769600255D29 /* Debug */,
+				198E7F061F54769600255D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		198E7F071F54769600255D29 /* Build configuration list for PBXNativeTarget "Cranbrook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				198E7F081F54769600255D29 /* Debug */,
+				198E7F091F54769600255D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		198E7F0A1F54769600255D29 /* Build configuration list for PBXNativeTarget "CranbrookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				198E7F0B1F54769600255D29 /* Debug */,
+				198E7F0C1F54769600255D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		198E7F0D1F54769600255D29 /* Build configuration list for PBXNativeTarget "CranbrookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				198E7F0E1F54769600255D29 /* Debug */,
+				198E7F0F1F54769600255D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 198E7ED71F54769600255D29 /* Project object */;
+}
