@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         tableView.delegate = self;
         tableView.dataSource = self;
-        readDate.dateFormat = "M'/'d'/'y";
+        readDate.dateFormat = "EEEE, MMM d";
         
         self.dateLabel.text = self.readDate.string(from:self.selected);
         
