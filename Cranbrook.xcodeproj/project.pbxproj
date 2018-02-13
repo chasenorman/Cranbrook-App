@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A82E8DBCE2FF4D06528578F /* Pods_CranbrookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4182CCFFFA9A8CD0494D785 /* Pods_CranbrookTests.framework */; };
 		1927B1B520312A4D007E7099 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B420312A4D007E7099 /* LoginController.swift */; };
 		1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B620331ED2007E7099 /* HomeworkCell.swift */; };
 		198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE21F54769600255D29 /* AppDelegate.swift */; };
@@ -16,6 +17,8 @@
 		198E7EED1F54769600255D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */; };
 		198E7EF81F54769600255D29 /* CranbrookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EF71F54769600255D29 /* CranbrookTests.swift */; };
 		198E7F031F54769600255D29 /* CranbrookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7F021F54769600255D29 /* CranbrookUITests.swift */; };
+		8BFDDD5B8C718E9E25710CAD /* Pods_CranbrookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */; };
+		9769675B09A095772B1693C0 /* Pods_Cranbrook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4411F7CA93F8FB62FD963DF7 /* Pods_Cranbrook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CranbrookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1927B1B420312A4D007E7099 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		1927B1B620331ED2007E7099 /* HomeworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkCell.swift; sourceTree = "<group>"; };
 		198E7EDF1F54769600255D29 /* Cranbrook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cranbrook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +55,14 @@
 		198E7EFE1F54769600255D29 /* CranbrookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CranbrookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		198E7F021F54769600255D29 /* CranbrookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CranbrookUITests.swift; sourceTree = "<group>"; };
 		198E7F041F54769600255D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A66966DB8D4B19AD5DF3C41 /* Pods-CranbrookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4411F7CA93F8FB62FD963DF7 /* Pods_Cranbrook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		660AC0A8AE8389EB3A352FF8 /* Pods-CranbrookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook.release.xcconfig"; sourceTree = "<group>"; };
+		BF2706C958988131CE2F1F6C /* Pods-CranbrookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4182CCFFFA9A8CD0494D785 /* Pods_CranbrookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CranbrookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF6B94EF2A7565A413B6764A /* Pods-Cranbrook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9769675B09A095772B1693C0 /* Pods_Cranbrook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A82E8DBCE2FF4D06528578F /* Pods_CranbrookTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFDDD5B8C718E9E25710CAD /* Pods_CranbrookUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				198E7EF61F54769600255D29 /* CranbrookTests */,
 				198E7F011F54769600255D29 /* CranbrookUITests */,
 				198E7EE01F54769600255D29 /* Products */,
+				631C5682B77E6FF8366D7C29 /* Pods */,
+				FA82008B1EFB85D4EC5E5E4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +148,29 @@
 			path = CranbrookUITests;
 			sourceTree = "<group>";
 		};
+		631C5682B77E6FF8366D7C29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF6B94EF2A7565A413B6764A /* Pods-Cranbrook.debug.xcconfig */,
+				BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */,
+				660AC0A8AE8389EB3A352FF8 /* Pods-CranbrookTests.debug.xcconfig */,
+				BF2706C958988131CE2F1F6C /* Pods-CranbrookTests.release.xcconfig */,
+				2A66966DB8D4B19AD5DF3C41 /* Pods-CranbrookUITests.debug.xcconfig */,
+				76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA82008B1EFB85D4EC5E5E4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4411F7CA93F8FB62FD963DF7 /* Pods_Cranbrook.framework */,
+				D4182CCFFFA9A8CD0494D785 /* Pods_CranbrookTests.framework */,
+				0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 198E7F071F54769600255D29 /* Build configuration list for PBXNativeTarget "Cranbrook" */;
 			buildPhases = (
+				EA6E2C3B5D920A1DEFE36AFC /* [CP] Check Pods Manifest.lock */,
 				198E7EDB1F54769600255D29 /* Sources */,
 				198E7EDC1F54769600255D29 /* Frameworks */,
 				198E7EDD1F54769600255D29 /* Resources */,
+				F661591394637F589E3A4395 /* [CP] Embed Pods Frameworks */,
+				8423447383980EAC31A24436 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 198E7F0A1F54769600255D29 /* Build configuration list for PBXNativeTarget "CranbrookTests" */;
 			buildPhases = (
+				7FC92110645E22F7DADE7D30 /* [CP] Check Pods Manifest.lock */,
 				198E7EEF1F54769600255D29 /* Sources */,
 				198E7EF01F54769600255D29 /* Frameworks */,
 				198E7EF11F54769600255D29 /* Resources */,
+				62DBE424D7304FEB565E2FFF /* [CP] Embed Pods Frameworks */,
+				7E468AF692FE6AE6318FC92D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 198E7F0D1F54769600255D29 /* Build configuration list for PBXNativeTarget "CranbrookUITests" */;
 			buildPhases = (
+				90BB6F3B3AB2F6198E8E26F5 /* [CP] Check Pods Manifest.lock */,
 				198E7EFA1F54769600255D29 /* Sources */,
 				198E7EFB1F54769600255D29 /* Frameworks */,
 				198E7EFC1F54769600255D29 /* Resources */,
+				82116109E1B102CBF2DE35AF /* [CP] Embed Pods Frameworks */,
+				E3267BBF5784F9A9B39B58C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +248,7 @@
 				TargetAttributes = {
 					198E7EDE1F54769600255D29 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8GN67288KC;
+						DevelopmentTeam = MM934V475K;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -265,6 +314,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62DBE424D7304FEB565E2FFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E468AF692FE6AE6318FC92D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FC92110645E22F7DADE7D30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CranbrookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82116109E1B102CBF2DE35AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8423447383980EAC31A24436 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90BB6F3B3AB2F6198E8E26F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CranbrookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3267BBF5784F9A9B39B58C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA6E2C3B5D920A1DEFE36AFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cranbrook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F661591394637F589E3A4395 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BRYXBanner/BRYXBanner.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRYXBanner.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		198E7EDB1F54769600255D29 /* Sources */ = {
@@ -438,12 +637,13 @@
 		};
 		198E7F081F54769600255D29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF6B94EF2A7565A413B6764A /* Pods-Cranbrook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8GN67288KC;
+				DEVELOPMENT_TEAM = MM934V475K;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.Cranbrook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -452,12 +652,13 @@
 		};
 		198E7F091F54769600255D29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8GN67288KC;
+				DEVELOPMENT_TEAM = MM934V475K;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.Cranbrook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -466,6 +667,7 @@
 		};
 		198E7F0B1F54769600255D29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 660AC0A8AE8389EB3A352FF8 /* Pods-CranbrookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +684,7 @@
 		};
 		198E7F0C1F54769600255D29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF2706C958988131CE2F1F6C /* Pods-CranbrookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +701,7 @@
 		};
 		198E7F0E1F54769600255D29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A66966DB8D4B19AD5DF3C41 /* Pods-CranbrookUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8GN67288KC;
@@ -513,6 +717,7 @@
 		};
 		198E7F0F1F54769600255D29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8GN67288KC;

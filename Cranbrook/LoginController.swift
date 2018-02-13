@@ -3,11 +3,14 @@
 //  Cranbrook
 //
 //  Created by Chase Norman on 2/11/18.
+//  Edited by Aziz Zaynutdinov.
 //  Copyright © 2018 Chase Norman. All rights reserved.
 //
 
 import Foundation
 import UIKit
+import BRYXBanner
+
 
 class LoginController : UIViewController{
     @IBOutlet weak var usernameField: UITextField!
@@ -43,7 +46,9 @@ class LoginController : UIViewController{
             self.usernameField.isUserInteractionEnabled = true;
             self.passwordField.isUserInteractionEnabled = true;
             self.loading.stopAnimating();
-        //some failure message?
+            let errorBanner = Banner(title: "Error", subtitle: "We've got a problem", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+            errorBanner.dismissesOnTap = true
+            errorBanner.show(duration: 3.0)
         }
     }
     

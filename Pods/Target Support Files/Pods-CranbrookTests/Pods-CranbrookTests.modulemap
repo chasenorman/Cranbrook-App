@@ -1,0 +1,6 @@
+framework module Pods_CranbrookTests {
+  umbrella header "Pods-CranbrookTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
