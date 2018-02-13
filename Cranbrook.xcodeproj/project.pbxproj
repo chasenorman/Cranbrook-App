@@ -118,14 +118,10 @@
 		198E7EE11F54769600255D29 /* Cranbrook */ = {
 			isa = PBXGroup;
 			children = (
-				198E7EE21F54769600255D29 /* AppDelegate.swift */,
-				198E7EE41F54769600255D29 /* ViewController.swift */,
-				198E7EE61F54769600255D29 /* Main.storyboard */,
-				198E7EE91F54769600255D29 /* Assets.xcassets */,
-				198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */,
-				198E7EEE1F54769600255D29 /* Info.plist */,
-				1927B1B420312A4D007E7099 /* LoginController.swift */,
-				1927B1B620331ED2007E7099 /* HomeworkCell.swift */,
+				87A0EAE420339C3300BB6DDB /* Supporting Files */,
+				87A0EAE320339C2700BB6DDB /* Model */,
+				87A0EAE220339C1200BB6DDB /* Controller */,
+				87A0EAE120339BFD00BB6DDB /* View */,
 			);
 			path = Cranbrook;
 			sourceTree = "<group>";
@@ -159,6 +155,42 @@
 				76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		87A0EAE120339BFD00BB6DDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */,
+				198E7EE61F54769600255D29 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		87A0EAE220339C1200BB6DDB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				198E7EE21F54769600255D29 /* AppDelegate.swift */,
+				198E7EE41F54769600255D29 /* ViewController.swift */,
+				1927B1B420312A4D007E7099 /* LoginController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		87A0EAE320339C2700BB6DDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1927B1B620331ED2007E7099 /* HomeworkCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87A0EAE420339C3300BB6DDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				198E7EE91F54769600255D29 /* Assets.xcassets */,
+				198E7EEE1F54769600255D29 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FA82008B1EFB85D4EC5E5E4B /* Frameworks */ = {
