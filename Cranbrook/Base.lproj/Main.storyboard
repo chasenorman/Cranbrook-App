@@ -77,6 +77,10 @@
                                 <rect key="frame" x="0.0" y="87" width="375" height="634"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="shg-tg-6Bc">
+                                    <rect key="frame" x="0.0" y="103" width="375" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="LHW-QN-swJ" detailTextLabel="dZV-87-mhB" rowHeight="102" style="IBUITableViewCellStyleSubtitle" id="bn1-KG-lje" customClass="HomeworkCell" customModule="Cranbrook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="102"/>
@@ -141,6 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="4tU-Op-RAO" id="a7R-ca-PE0"/>
+                        <outlet property="loading" destination="shg-tg-6Bc" id="Eyv-aY-aAa"/>
                         <outlet property="tableView" destination="epU-04-JtT" id="VO4-Sw-GJT"/>
                         <segue destination="G0Q-6G-Rjb" kind="show" identifier="login" id="DnF-hb-ajd"/>
                     </connections>

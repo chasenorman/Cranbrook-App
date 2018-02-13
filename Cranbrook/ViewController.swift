@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let readDate = DateFormatter();
     
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     var selected: Date = Date();
     
@@ -25,6 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self;
         readDate.dateFormat = "EEEE, MMM d";
         formatDate.dateFormat = "M'%2F'd'%2F'y";
+        loading.hidesWhenStopped = true;
         
         self.dateLabel.text = self.readDate.string(from:self.selected);
         
@@ -46,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loginSuccess(){
-        getHomework(start: selected, end: selected);
+        dateChanged();
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,6 +82,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         try self.homework = (JSONSerialization.jsonObject(with: formattedString.data(using: .utf8)!, options: []) as! [String : [[String : Any]]])["homework"]!;
                         
                         DispatchQueue.main.async {
+                            self.loading.stopAnimating();
                             self.tableView.reloadData();
                         }
                     }catch{}
@@ -111,6 +114,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func dateChanged(){
         DispatchQueue.main.async{
+            self.homework = [];
+            self.loading.startAnimating();
             self.dateLabel.text = self.readDate.string(from:self.selected);
             self.getHomework(start: self.selected, end: self.selected)
         }
