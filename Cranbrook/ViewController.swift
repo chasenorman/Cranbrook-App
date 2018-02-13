@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
+    let formatDate = DateFormatter();
     let readDate = DateFormatter();
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -23,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self;
         tableView.dataSource = self;
         readDate.dateFormat = "EEEE, MMM d";
+        formatDate.dateFormat = "M'%2F'd'%2F'y";
         
         self.dateLabel.text = self.readDate.string(from:self.selected);
         
@@ -63,9 +65,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func getHomework(start: Date, end: Date) {
-        let formatDate = DateFormatter();
-        formatDate.dateFormat = "M'%2F'd'%2F'y";
-        
         let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
         var request = URLRequest(url: URL(string: urlString)!);
         request.httpShouldHandleCookies = true;
@@ -102,6 +101,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
         cell.textLabel!.text = String(htmlEncodedString: (homework[indexPath.row]["short_description"]! as AnyObject).description);
+        cell.detailTextLabel!.text = String(htmlEncodedString: (homework[indexPath.row]["long_description"]! as AnyObject).description);
         return cell
     }
     

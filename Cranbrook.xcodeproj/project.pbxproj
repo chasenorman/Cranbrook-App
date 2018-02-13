@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1927B1B520312A4D007E7099 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B420312A4D007E7099 /* LoginController.swift */; };
+		1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B620331ED2007E7099 /* HomeworkCell.swift */; };
 		198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE21F54769600255D29 /* AppDelegate.swift */; };
 		198E7EE51F54769600255D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE41F54769600255D29 /* ViewController.swift */; };
 		198E7EE81F54769600255D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE61F54769600255D29 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		1927B1B420312A4D007E7099 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		1927B1B620331ED2007E7099 /* HomeworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkCell.swift; sourceTree = "<group>"; };
 		198E7EDF1F54769600255D29 /* Cranbrook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cranbrook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198E7EE21F54769600255D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198E7EE41F54769600255D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */,
 				198E7EEE1F54769600255D29 /* Info.plist */,
 				1927B1B420312A4D007E7099 /* LoginController.swift */,
+				1927B1B620331ED2007E7099 /* HomeworkCell.swift */,
 			);
 			path = Cranbrook;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				198E7EE51F54769600255D29 /* ViewController.swift in Sources */,
+				1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */,
 				1927B1B520312A4D007E7099 /* LoginController.swift in Sources */,
 				198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */,
 			);
