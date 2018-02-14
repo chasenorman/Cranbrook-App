@@ -52,7 +52,6 @@ class LoginController : UIViewController{
         }
     }
     
-    //CONSIDER NETWORK ISSUES
     static func login(username: String, password: String, completionHandler: @escaping ()->Void, failureHandler: @escaping ()->Void, networkErrorHandler: @escaping ()->Void){
         var request = URLRequest(url: URL(string: "https://cranbrook.myschoolapp.com/api/SignIn")!);
         request.httpMethod = "POST";
