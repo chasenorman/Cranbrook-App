@@ -118,6 +118,7 @@
 		198E7EE11F54769600255D29 /* Cranbrook */ = {
 			isa = PBXGroup;
 			children = (
+				198E7EEE1F54769600255D29 /* Info.plist */,
 				87A0EAE420339C3300BB6DDB /* Supporting Files */,
 				87A0EAE320339C2700BB6DDB /* Model */,
 				87A0EAE220339C1200BB6DDB /* Controller */,
@@ -188,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				198E7EE91F54769600255D29 /* Assets.xcassets */,
-				198E7EEE1F54769600255D29 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
