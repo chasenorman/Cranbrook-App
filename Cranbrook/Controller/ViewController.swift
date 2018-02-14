@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var homework: [[String:Any]] = [];
+    var finished: [Bool] = [];
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,13 +35,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             loginSuccess();
         }
         else if let username = UserDefaults.standard.string(forKey: "username"), let password = UserDefaults.standard.string(forKey: "password"){
-            LoginController.login(username: username, password: password, completionHandler: loginSuccess, errorHandler: loginFailed)
+            LoginController.login(username: username, password: password, completionHandler: loginSuccess, failureHandler: loginFailed, networkErrorHandler: networkError)
         }
         else{
             performSegue(withIdentifier: "login", sender: nil)
         }
     
         super.viewDidLoad()
+    }
+    
+    func networkError(){
+        performSegue(withIdentifier: "networkError", sender: nil)
     }
     
     func loginFailed(){
@@ -80,7 +85,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let formattedString = "{\"homework\":\(test)}";
                     do{
                         try self.homework = (JSONSerialization.jsonObject(with: formattedString.data(using: .utf8)!, options: []) as! [String : [[String : Any]]])["homework"]!;
-                        
+                        self.finished = [Bool](repeating: false, count: self.homework.count);
                         DispatchQueue.main.async {
                             self.loading.stopAnimating();
                             self.tableView.reloadData();
@@ -88,10 +93,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     }catch{}
                 }
                 else{
-                    LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, errorHandler: self.loginFailed);
+                    LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
                 }
             }else{
-                LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, errorHandler: self.loginFailed);
+                LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
             }
         }
         task.resume();
@@ -102,10 +107,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
-        cell.textLabel!.text = String(htmlEncodedString: (homework[indexPath.row]["short_description"]! as AnyObject).description);
-        cell.detailTextLabel!.text = String(htmlEncodedString: (homework[indexPath.row]["long_description"]! as AnyObject).description);
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeworkCell;
+        cell.homework(homework[indexPath.row]);
+        if finished[indexPath.row] {
+            cell.backgroundColor = UIColor(red: 92/255.0, green: 221/255.0, blue: 103/255.0, alpha: 1)
+        }
+        else{
+            cell.backgroundColor = UIColor.white;
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        finished[indexPath.row] = !finished[indexPath.row];
+        DispatchQueue.main.async{
+            self.tableView.reloadData();
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -141,10 +158,4 @@ extension String {
         }
     }
 }
-
-enum HTTPError : Error {
-    case MalformedResponse
-    case FailedRequest
-}
-
 

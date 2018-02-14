@@ -27,7 +27,7 @@ class LoginController : UIViewController{
         usernameField.isUserInteractionEnabled = false;
         passwordField.isUserInteractionEnabled = false;
         loading.startAnimating();
-        LoginController.login(username: usernameField.text!, password: passwordField.text!, completionHandler: loginSuccess, errorHandler: loginFailure)
+        LoginController.login(username: usernameField.text!, password: passwordField.text!, completionHandler: loginSuccess, failureHandler: loginFailure, networkErrorHandler: loginFailure)
     }
     
     func loginSuccess(){
@@ -52,7 +52,8 @@ class LoginController : UIViewController{
         }
     }
     
-    static func login(username: String, password: String, completionHandler: @escaping ()->Void, errorHandler: @escaping ()->Void){
+    //CONSIDER NETWORK ISSUES
+    static func login(username: String, password: String, completionHandler: @escaping ()->Void, failureHandler: @escaping ()->Void, networkErrorHandler: @escaping ()->Void){
         var request = URLRequest(url: URL(string: "https://cranbrook.myschoolapp.com/api/SignIn")!);
         request.httpMethod = "POST";
         request.setValue("application/json", forHTTPHeaderField: "Content-Type");
@@ -66,11 +67,11 @@ class LoginController : UIViewController{
                     completionHandler();
                 }
                 else{
-                    errorHandler();
+                    failureHandler();
                 }
             }
             else{
-                errorHandler();
+                networkErrorHandler();
             }
         }
         task.resume();
