@@ -121,16 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				198E7EEE1F54769600255D29 /* Info.plist */,
-<<<<<<< Updated upstream
 				87A0EAE420339C3300BB6DDB /* Supporting Files */,
 				87A0EAE320339C2700BB6DDB /* Model */,
 				87A0EAE220339C1200BB6DDB /* Controller */,
 				87A0EAE120339BFD00BB6DDB /* View */,
-=======
-				1927B1B420312A4D007E7099 /* LoginController.swift */,
-				1927B1B620331ED2007E7099 /* HomeworkCell.swift */,
-				1927B1B820346DD6007E7099 /* NetworkErrorController.swift */,
->>>>>>> Stashed changes
 			);
 			path = Cranbrook;
 			sourceTree = "<group>";
