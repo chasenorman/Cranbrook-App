@@ -14,7 +14,6 @@
 		198E7EE51F54769600255D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE41F54769600255D29 /* ViewController.swift */; };
 		198E7EE81F54769600255D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE61F54769600255D29 /* Main.storyboard */; };
 		198E7EEA1F54769600255D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE91F54769600255D29 /* Assets.xcassets */; };
-		198E7EED1F54769600255D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */; };
 		198E7EF81F54769600255D29 /* CranbrookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EF71F54769600255D29 /* CranbrookTests.swift */; };
 		198E7F031F54769600255D29 /* CranbrookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7F021F54769600255D29 /* CranbrookUITests.swift */; };
 		8BFDDD5B8C718E9E25710CAD /* Pods_CranbrookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */; };
@@ -47,7 +46,6 @@
 		198E7EE41F54769600255D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		198E7EE71F54769600255D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		198E7EE91F54769600255D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		198E7EEC1F54769600255D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		198E7EEE1F54769600255D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		198E7EF31F54769600255D29 /* CranbrookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CranbrookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		198E7EF71F54769600255D29 /* CranbrookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CranbrookTests.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		87A0EAE120339BFD00BB6DDB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */,
 				198E7EE61F54769600255D29 /* Main.storyboard */,
 			);
 			path = View;
@@ -325,7 +322,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				198E7EED1F54769600255D29 /* LaunchScreen.storyboard in Resources */,
 				198E7EEA1F54769600255D29 /* Assets.xcassets in Resources */,
 				198E7EE81F54769600255D29 /* Main.storyboard in Resources */,
 			);
@@ -547,14 +543,6 @@
 				198E7EE71F54769600255D29 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				198E7EEC1F54769600255D29 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

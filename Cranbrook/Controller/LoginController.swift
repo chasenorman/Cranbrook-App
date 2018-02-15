@@ -46,13 +46,23 @@ class LoginController : UIViewController{
             self.usernameField.isUserInteractionEnabled = true;
             self.passwordField.isUserInteractionEnabled = true;
             self.loading.stopAnimating();
-            let errorBanner = Banner(title: "Error", subtitle: "We've got a problem", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+            let errorBanner = Banner(title: "Error", subtitle: "Incorrect username or password.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
             errorBanner.dismissesOnTap = true
             errorBanner.show(duration: 3.0)
         }
     }
     
-    //CONSIDER NETWORK ISSUES
+    func networkError(){
+        DispatchQueue.main.async{
+            self.usernameField.isUserInteractionEnabled = true;
+            self.passwordField.isUserInteractionEnabled = true;
+            self.loading.stopAnimating();
+            let errorBanner = Banner(title: "Error", subtitle: "You are offline.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+            errorBanner.dismissesOnTap = true
+            errorBanner.show(duration: 3.0)
+        }
+    }
+    
     static func login(username: String, password: String, completionHandler: @escaping ()->Void, failureHandler: @escaping ()->Void, networkErrorHandler: @escaping ()->Void){
         var request = URLRequest(url: URL(string: "https://cranbrook.myschoolapp.com/api/SignIn")!);
         request.httpMethod = "POST";
@@ -60,7 +70,7 @@ class LoginController : UIViewController{
         let json: [String:Any] = ["From":"","Username":username,"Password":password,"remember":false,"InterfaceSource":"WebApp"];
         let jsonData = try? JSONSerialization.data(withJSONObject: json);
         request.httpBody = jsonData;
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let str = response?.description{
                 if let index = str.range(of:"\"t=")?.upperBound{
                     UserDefaults.standard.set(String(str[index..<str.index(index,offsetBy: 36)]), forKey: "token");
@@ -73,7 +83,6 @@ class LoginController : UIViewController{
             else{
                 networkErrorHandler();
             }
-        }
-        task.resume();
+        }.resume();
     }
 }

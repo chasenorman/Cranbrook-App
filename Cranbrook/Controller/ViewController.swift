@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BRYXBanner
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var homework: [[String:Any]] = [];
@@ -38,18 +39,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             LoginController.login(username: username, password: password, completionHandler: loginSuccess, failureHandler: loginFailed, networkErrorHandler: networkError)
         }
         else{
-            performSegue(withIdentifier: "login", sender: nil)
+            self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
         }
     
         super.viewDidLoad()
     }
     
     func networkError(){
-        performSegue(withIdentifier: "networkError", sender: nil)
+        DispatchQueue.main.async{
+            let errorBanner = Banner(title: "Error", subtitle: "You are offline.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+            errorBanner.dismissesOnTap = true
+            errorBanner.show(duration: 3.0)
+        }
     }
     
     func loginFailed(){
-        performSegue(withIdentifier: "login", sender: nil)
+        self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
     }
     
     func loginSuccess(){
@@ -78,7 +83,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         request.httpMethod = "GET";
         request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
         
-        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
             if let httpResponse = response as? HTTPURLResponse {
                 if(httpResponse.statusCode == 200){
                     let test = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String;
@@ -98,8 +103,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }else{
                 LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
             }
-        }
-        task.resume();
+        }.resume();
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

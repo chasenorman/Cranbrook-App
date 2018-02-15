@@ -27,8 +27,4 @@ class HomeworkCell: UITableViewCell{
             detailTextLabel!.text = String(htmlEncodedString: long_description);
         }
     }
-    
-    func pressed(finished: Bool){
-    }
-    
 }
