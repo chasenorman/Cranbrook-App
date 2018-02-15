@@ -17,6 +17,7 @@
 		198E7EED1F54769600255D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EEB1F54769600255D29 /* LaunchScreen.storyboard */; };
 		198E7EF81F54769600255D29 /* CranbrookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EF71F54769600255D29 /* CranbrookTests.swift */; };
 		198E7F031F54769600255D29 /* CranbrookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7F021F54769600255D29 /* CranbrookUITests.swift */; };
+		87BC1B0120352E23004FCFC3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC1B0020352E23004FCFC3 /* Reachability.swift */; };
 		8BFDDD5B8C718E9E25710CAD /* Pods_CranbrookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */; };
 		9769675B09A095772B1693C0 /* Pods_Cranbrook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4411F7CA93F8FB62FD963DF7 /* Pods_Cranbrook.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		4411F7CA93F8FB62FD963DF7 /* Pods_Cranbrook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		660AC0A8AE8389EB3A352FF8 /* Pods-CranbrookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		87BC1B0020352E23004FCFC3 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook.release.xcconfig"; sourceTree = "<group>"; };
 		BF2706C958988131CE2F1F6C /* Pods-CranbrookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4182CCFFFA9A8CD0494D785 /* Pods_CranbrookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CranbrookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				1927B1B620331ED2007E7099 /* HomeworkCell.swift */,
+				87BC1B0020352E23004FCFC3 /* Reachability.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				198E7EE51F54769600255D29 /* ViewController.swift in Sources */,
 				1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */,
 				1927B1B520312A4D007E7099 /* LoginController.swift in Sources */,
+				87BC1B0120352E23004FCFC3 /* Reachability.swift in Sources */,
 				198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

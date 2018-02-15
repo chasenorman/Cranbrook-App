@@ -3,6 +3,7 @@
 //  Cranbrook
 //
 //  Created by Chase Norman on 8/28/17.
+//  Edited by Aziz Zaynutdinov.
 //  Copyright © 2017 Chase Norman. All rights reserved.
 //
 
@@ -40,8 +41,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         else{
             performSegue(withIdentifier: "login", sender: nil)
         }
+    }
     
-        super.viewDidLoad()
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            let refreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action: #selector(updateHomework), for: .valueChanged)
+            tableView.refreshControl = refreshControl
+        }
+    
+    @objc func updateHomework(refreshControl: UIRefreshControl) {
+        
+        getHomework(start: self.selected, end: self.selected)
+        refreshControl.endRefreshing()
     }
     
     func networkError(){
@@ -72,6 +85,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func getHomework(start: Date, end: Date) {
+        if Reachability.isConnectedToNetwork() == false{
+            networkError()
+        }
+        else {
+        print("Refresh worked!")
         let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
         var request = URLRequest(url: URL(string: urlString)!);
         request.httpShouldHandleCookies = true;
@@ -100,6 +118,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         task.resume();
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
