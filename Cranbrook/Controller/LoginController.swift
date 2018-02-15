@@ -70,7 +70,7 @@ class LoginController : UIViewController{
         let json: [String:Any] = ["From":"","Username":username,"Password":password,"remember":false,"InterfaceSource":"WebApp"];
         let jsonData = try? JSONSerialization.data(withJSONObject: json);
         request.httpBody = jsonData;
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let str = response?.description{
                 if let index = str.range(of:"\"t=")?.upperBound{
                     UserDefaults.standard.set(String(str[index..<str.index(index,offsetBy: 36)]), forKey: "token");
@@ -83,7 +83,6 @@ class LoginController : UIViewController{
             else{
                 networkErrorHandler();
             }
-        }
-        task.resume();
+        }.resume();
     }
 }
