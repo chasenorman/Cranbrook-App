@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import BRYXBanner
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var homework: [[String:Any]] = [];
@@ -58,7 +59,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func networkError(){
-        performSegue(withIdentifier: "networkError", sender: nil)
+        let errorBanner = Banner(title: "Error", subtitle: "You are offline.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+        errorBanner.dismissesOnTap = true
+        errorBanner.show(duration: 3.0)
     }
     
     func loginFailed(){

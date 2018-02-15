@@ -27,7 +27,7 @@ class LoginController : UIViewController{
         usernameField.isUserInteractionEnabled = false;
         passwordField.isUserInteractionEnabled = false;
         loading.startAnimating();
-        LoginController.login(username: usernameField.text!, password: passwordField.text!, completionHandler: loginSuccess, failureHandler: loginFailure, networkErrorHandler: loginFailure)
+        LoginController.login(username: usernameField.text!, password: passwordField.text!, completionHandler: loginSuccess, failureHandler: loginFailure, networkErrorHandler: networkError)
     }
     
     func loginSuccess(){
@@ -46,7 +46,18 @@ class LoginController : UIViewController{
             self.usernameField.isUserInteractionEnabled = true;
             self.passwordField.isUserInteractionEnabled = true;
             self.loading.stopAnimating();
-            let errorBanner = Banner(title: "Error", subtitle: "We've got a problem", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+            let errorBanner = Banner(title: "Error", subtitle: "Incorrect username or password.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+            errorBanner.dismissesOnTap = true
+            errorBanner.show(duration: 3.0)
+        }
+    }
+    
+    func networkError(){
+        DispatchQueue.main.async{
+            self.usernameField.isUserInteractionEnabled = true;
+            self.passwordField.isUserInteractionEnabled = true;
+            self.loading.stopAnimating();
+            let errorBanner = Banner(title: "Error", subtitle: "You are offline.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
             errorBanner.dismissesOnTap = true
             errorBanner.show(duration: 3.0)
         }
