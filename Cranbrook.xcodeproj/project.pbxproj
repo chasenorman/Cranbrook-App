@@ -10,7 +10,6 @@
 		0A82E8DBCE2FF4D06528578F /* Pods_CranbrookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4182CCFFFA9A8CD0494D785 /* Pods_CranbrookTests.framework */; };
 		1927B1B520312A4D007E7099 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B420312A4D007E7099 /* LoginController.swift */; };
 		1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B620331ED2007E7099 /* HomeworkCell.swift */; };
-		1927B1B920346DD6007E7099 /* NetworkErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B820346DD6007E7099 /* NetworkErrorController.swift */; };
 		198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE21F54769600255D29 /* AppDelegate.swift */; };
 		198E7EE51F54769600255D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE41F54769600255D29 /* ViewController.swift */; };
 		198E7EE81F54769600255D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE61F54769600255D29 /* Main.storyboard */; };
@@ -43,7 +42,6 @@
 		0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CranbrookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1927B1B420312A4D007E7099 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		1927B1B620331ED2007E7099 /* HomeworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkCell.swift; sourceTree = "<group>"; };
-		1927B1B820346DD6007E7099 /* NetworkErrorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorController.swift; sourceTree = "<group>"; };
 		198E7EDF1F54769600255D29 /* Cranbrook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cranbrook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198E7EE21F54769600255D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198E7EE41F54769600255D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -504,7 +502,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1927B1B920346DD6007E7099 /* NetworkErrorController.swift in Sources */,
 				198E7EE51F54769600255D29 /* ViewController.swift in Sources */,
 				1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */,
 				1927B1B520312A4D007E7099 /* LoginController.swift in Sources */,
