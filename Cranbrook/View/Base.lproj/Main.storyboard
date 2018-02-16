@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3w0-gE-dwL">
+>>>>>>> experimental
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -75,27 +79,58 @@
                         <outlet property="loading" destination="ax3-uM-NxD" id="gqH-6T-Cjx"/>
                         <outlet property="passwordField" destination="N7H-Jh-frC" id="GWc-VV-IFw"/>
                         <outlet property="usernameField" destination="lGQ-Rw-tUS" id="dBR-Yh-IIP"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="enter" id="YEn-bS-EBx"/>
+                        <segue destination="3w0-gE-dwL" kind="show" identifier="enter" id="8G9-11-ErF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hff-N9-aBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-2154" y="316"/>
+=======
+            <point key="canvasLocation" x="-2535" y="202"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="kR4-e8-m7c">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cranbrook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OWH-LJ-VoB" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="bDr-AW-hOl"/>
+                        <viewControllerLayoutGuide type="bottom" id="qea-yU-L0e"/>
                     </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8h8-23-jqp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="xMP-EF-trq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWB-qN-FRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-828" y="697"/>
+>>>>>>> experimental
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="bD0-N1-w2z">
+            <objects>
+                <viewController id="1U5-lJ-sBi" customClass="ViewController" customModule="Cranbrook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aLC-Ng-9ku"/>
+                        <viewControllerLayoutGuide type="bottom" id="VeF-M2-Jvy"/>
+                    </layoutGuides>
+<<<<<<< HEAD
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+=======
+                    <view key="view" contentMode="scaleToFill" id="mtN-Uc-5ip">
+>>>>>>> experimental
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="epU-04-JtT">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="95" width="375" height="626"/>
+=======
+                                <rect key="frame" x="0.0" y="87" width="375" height="580"/>
+>>>>>>> experimental
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="shg-tg-6Bc">
@@ -130,12 +165,17 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tU-Op-RAO">
+<<<<<<< HEAD
                                 <rect key="frame" x="70" y="52" width="235" height="21"/>
+=======
+                                <rect key="frame" x="70" y="44" width="235" height="21"/>
+>>>>>>> experimental
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v01-dm-2hY">
                                 <rect key="frame" x="0.0" y="721" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -159,21 +199,67 @@
                                 <state key="normal" title="&lt;"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fhf-ll-qb7"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sle-Yr-UTx">
+                                <rect key="frame" x="309" y="30" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="forwardButtonPressed:" destination="1U5-lJ-sBi" eventType="touchUpInside" id="UeA-ht-NBL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJf-hP-OTl">
+                                <rect key="frame" x="16" y="30" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="1U5-lJ-sBi" eventType="touchUpInside" id="VdK-49-CeS"/>
+>>>>>>> experimental
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Tsz-l9-AF8"/>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="dateLabel" destination="4tU-Op-RAO" id="a7R-ca-PE0"/>
                         <outlet property="loading" destination="shg-tg-6Bc" id="Eyv-aY-aAa"/>
                         <outlet property="tableView" destination="epU-04-JtT" id="VO4-Sw-GJT"/>
                         <segue destination="G0Q-6G-Rjb" kind="show" identifier="login" id="fJl-a5-cmz"/>
+=======
+                        <outlet property="dateLabel" destination="4tU-Op-RAO" id="xKs-pj-Ew8"/>
+                        <outlet property="loading" destination="shg-tg-6Bc" id="yh8-51-SlF"/>
+                        <outlet property="tableView" destination="epU-04-JtT" id="FWL-jI-YPj"/>
+>>>>>>> experimental
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3R9-Ot-3gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-608.79999999999995" y="315.51724137931035"/>
+=======
+            <point key="canvasLocation" x="-710" y="-261"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="60g-1B-Ztd">
+            <objects>
+                <tabBarController id="3w0-gE-dwL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J0h-lo-7X6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1U5-lJ-sBi" kind="relationship" relationship="viewControllers" id="XjU-9I-VVo"/>
+                        <segue destination="OWH-LJ-VoB" kind="relationship" relationship="viewControllers" id="BFK-Ih-V8g"/>
+                        <segue destination="G0Q-6G-Rjb" kind="show" identifier="login" id="Oih-mb-S5C"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYE-4E-ZQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1700" y="202"/>
+>>>>>>> experimental
         </scene>
     </scenes>
 </document>

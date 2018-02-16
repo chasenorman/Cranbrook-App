@@ -83,6 +83,11 @@ class LoginController : UIViewController{
             else{
                 networkErrorHandler();
             }
+<<<<<<< HEAD
         }.resume();
+=======
+            }.resume();
+>>>>>>> experimental
     }
 }
+
