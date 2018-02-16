@@ -171,6 +171,13 @@
                                     <action selector="backButtonPressed:" destination="1U5-lJ-sBi" eventType="touchUpInside" id="VdK-49-CeS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No homework to display" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvI-vZ-Csx">
+                                <rect key="frame" x="0.0" y="397" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -178,6 +185,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="4tU-Op-RAO" id="xKs-pj-Ew8"/>
                         <outlet property="loading" destination="shg-tg-6Bc" id="yh8-51-SlF"/>
+                        <outlet property="noHomeworkLabel" destination="FvI-vZ-Csx" id="FFx-KZ-dih"/>
                         <outlet property="tableView" destination="epU-04-JtT" id="FWL-jI-YPj"/>
                     </connections>
                 </viewController>
@@ -203,6 +211,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYE-4E-ZQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1700" y="202"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="tqW-Gc-lBe">
+            <objects>
+                <tableViewController id="SM7-mH-82G" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2yK-1S-Ypb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6xh-oO-umD">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6xh-oO-umD" id="fGH-LC-ZrG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SM7-mH-82G" id="3H6-GY-Eha"/>
+                            <outlet property="delegate" destination="SM7-mH-82G" id="LNz-pY-C6t"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucp-bR-Ujr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

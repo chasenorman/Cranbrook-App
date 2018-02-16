@@ -12,7 +12,7 @@ import BRYXBanner
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var homework: [Homework] = [];
-    var finished: [Bool] = [];
+    var finished: [UIColor] = [];
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,18 +21,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var noHomeworkLabel: UILabel!
     
     var selected: Date = Date();
     
     override func viewDidAppear(_ animated: Bool) {
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        readDate.dateFormat = "EEEE, MMM d";
-        formatDate.dateFormat = "M'%2F'd'%2F'y";
-        loading.hidesWhenStopped = true;
-        
-        self.dateLabel.text = self.readDate.string(from:self.selected);
-        
         if UserDefaults.standard.string(forKey:"token") != nil{
             loginSuccess();
         }
@@ -50,11 +43,51 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(updateHomework), for: .valueChanged)
         tableView.refreshControl = refreshControl
+        
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        readDate.dateFormat = "EEEE, MMM d";
+        formatDate.dateFormat = "M'%2F'd'%2F'y";
+        loading.hidesWhenStopped = true;
+        
+        self.dateLabel.text = self.readDate.string(from:self.selected);
+        noHomeworkLabel.isHidden = true;
     }
     
     @objc func updateHomework(refreshControl: UIRefreshControl) {
         getHomework(start: self.selected, end: self.selected)
         refreshControl.endRefreshing()
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?{
+        
+        let moreRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Complete", handler:{action, indexpath in
+            DispatchQueue.main.async{
+                if(self.finished[indexPath.row] != UIColor(red: 0.298, green: 0.851, blue: 0.3922, alpha: 1.0)){
+                    self.finished[indexPath.row] = UIColor(red: 0.298, green: 0.851, blue: 0.3922, alpha: 1.0);
+                }
+                else{
+                    self.finished[indexPath.row] = UIColor.white;
+                }
+                self.tableView.reloadData();
+            }
+        });
+        moreRowAction.backgroundColor = UIColor(red: 0.298, green: 0.851, blue: 0.3922, alpha: 1.0);
+        
+        let toDoRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "To-Do", handler:{action, indexpath in
+            DispatchQueue.main.async{
+                if(self.finished[indexPath.row] != UIColor.orange){
+                    self.finished[indexPath.row] = UIColor.orange;
+                }
+                else{
+                    self.finished[indexPath.row] = UIColor.white;
+                }
+                self.tableView.reloadData();
+            }
+        });
+        toDoRowAction.backgroundColor = UIColor.orange;
+        
+        return [toDoRowAction, moreRowAction];
     }
     
     func networkError(){
@@ -97,18 +130,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             request.httpMethod = "GET";
             request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
             
-            let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+            URLSession.shared.dataTask(with: request) {(data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
                     if(httpResponse.statusCode == 200){
-                        do{
-                            try self.homework = JSONDecoder().decode([Homework].self, from: data!);
-                            self.finished = [Bool](repeating: false, count: self.homework.count);
-                            DispatchQueue.main.async {
-                                self.loading.stopAnimating();
-                                self.tableView.reloadData();
-                            }
-                        }catch{
-                            print("parsing error");
+                        do{try self.homework = JSONDecoder().decode([Homework].self, from: data!);}catch{}
+                        self.finished = [UIColor](repeating: UIColor.white, count: self.homework.count);
+                        DispatchQueue.main.async {
+                            self.loading.stopAnimating();
+                            self.tableView.reloadData();
+                            self.noHomeworkLabel.isHidden = self.homework.count == 0 ? false : true;
                         }
                     }
                     else{
@@ -117,8 +147,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }else{
                     LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
                 }
-            }
-            task.resume();
+            }.resume();
         }
     }
     
@@ -129,20 +158,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeworkCell;
         cell.homework(homework[indexPath.row]);
-        if finished[indexPath.row] {
-            cell.backgroundColor = UIColor(red: 92/255.0, green: 221/255.0, blue: 103/255.0, alpha: 1)
-        }
-        else{
-            cell.backgroundColor = UIColor.white;
-        }
+        cell.backgroundColor = finished[indexPath.row];
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        finished[indexPath.row] = !finished[indexPath.row];
-        DispatchQueue.main.async{
-            self.tableView.reloadData();
-        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
