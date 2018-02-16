@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A82E8DBCE2FF4D06528578F /* Pods_CranbrookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4182CCFFFA9A8CD0494D785 /* Pods_CranbrookTests.framework */; };
+		19277D8820367C2C0091F243 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19277D8720367C2C0091F243 /* Homework.swift */; };
 		1927B1B520312A4D007E7099 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B420312A4D007E7099 /* LoginController.swift */; };
 		1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927B1B620331ED2007E7099 /* HomeworkCell.swift */; };
 		198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE21F54769600255D29 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CranbrookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19277D8720367C2C0091F243 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
 		1927B1B420312A4D007E7099 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		1927B1B620331ED2007E7099 /* HomeworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkCell.swift; sourceTree = "<group>"; };
 		198E7EDF1F54769600255D29 /* Cranbrook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cranbrook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +191,7 @@
 			children = (
 				1927B1B620331ED2007E7099 /* HomeworkCell.swift */,
 				8705AA29203659AE00B5FBF7 /* Reachability.swift */,
+				19277D8720367C2C0091F243 /* Homework.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,7 +291,7 @@
 				TargetAttributes = {
 					198E7EDE1F54769600255D29 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = MM934V475K;
+						DevelopmentTeam = 8GN67288KC;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -510,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				198E7EE51F54769600255D29 /* ViewController.swift in Sources */,
+				19277D8820367C2C0091F243 /* Homework.swift in Sources */,
 				1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */,
 				1927B1B520312A4D007E7099 /* LoginController.swift in Sources */,
 				8705AA2A203659AE00B5FBF7 /* Reachability.swift in Sources */,
@@ -672,10 +676,10 @@
 			baseConfigurationReference = FF6B94EF2A7565A413B6764A /* Pods-Cranbrook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MM934V475K;
+				DEVELOPMENT_TEAM = 8GN67288KC;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrook;
+				PRODUCT_BUNDLE_IDENTIFIER = Cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -687,10 +691,10 @@
 			baseConfigurationReference = BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MM934V475K;
+				DEVELOPMENT_TEAM = 8GN67288KC;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrook;
+				PRODUCT_BUNDLE_IDENTIFIER = Cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

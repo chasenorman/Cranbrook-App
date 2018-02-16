@@ -11,7 +11,7 @@ import UIKit
 import BRYXBanner
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var homework: [[String:Any]] = [];
+    var homework: [Homework] = [];
     var finished: [Bool] = [];
     
     @IBOutlet weak var tableView: UITableView!
@@ -53,7 +53,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @objc func updateHomework(refreshControl: UIRefreshControl) {
-        
         getHomework(start: self.selected, end: self.selected)
         refreshControl.endRefreshing()
     }
@@ -101,16 +100,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
                     if(httpResponse.statusCode == 200){
-                        let test = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String;
-                        let formattedString = "{\"homework\":\(test)}";
                         do{
-                            try self.homework = (JSONSerialization.jsonObject(with: formattedString.data(using: .utf8)!, options: []) as! [String : [[String : Any]]])["homework"]!;
+                            try self.homework = JSONDecoder().decode([Homework].self, from: data!);
                             self.finished = [Bool](repeating: false, count: self.homework.count);
                             DispatchQueue.main.async {
                                 self.loading.stopAnimating();
                                 self.tableView.reloadData();
                             }
-                        }catch{}
+                        }catch{
+                            print("parsing error");
+                        }
                     }
                     else{
                         LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
@@ -160,23 +159,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-extension String {
-    init?(htmlEncodedString: String) {
-        guard let data = htmlEncodedString.data(using: .utf8) else {
-            return nil
-        }
-        
-        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
-            NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,
-            NSAttributedString.DocumentReadingOptionKey.characterEncoding : String.Encoding.utf8.rawValue
-        ]
-        
-        if let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil){
-            self.init(attributedString.string)
-        }
-        else {
-            return nil
-        }
-    }
-}
+
 

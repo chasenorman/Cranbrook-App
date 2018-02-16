@@ -19,17 +19,31 @@ class HomeworkCell: UITableViewCell{
         super.init(coder: aDecoder)
     }
     
-    func homework(_ homework: [String:Any]){
-        if let short_description = homework["short_description"]! as? String{
-            textLabel!.text = String(htmlEncodedString: short_description);
-        }
-        if let long_description = homework["long_description"]! as? String{
-            detailTextLabel!.text = String(htmlEncodedString: long_description);
+    func homework(_ homework: Homework){
+        detailTextLabel!.text = "";
+        textLabel!.text = String(htmlEncodedString: homework.short_description);
+        if let l = homework.long_description{
+            detailTextLabel!.text = String(htmlEncodedString: l);
         }
     }
-    
-    func pressed(finished: Bool){
-    }
-    
 }
 
+extension String {
+    init?(htmlEncodedString: String) {
+        guard let data = htmlEncodedString.data(using: .utf8) else {
+            return nil
+        }
+        
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,
+            NSAttributedString.DocumentReadingOptionKey.characterEncoding : String.Encoding.utf8.rawValue
+        ]
+        
+        if let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil){
+            self.init(attributedString.string)
+        }
+        else {
+            return nil
+        }
+    }
+}

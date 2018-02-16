@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G0Q-6G-Rjb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3w0-gE-dwL">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="-2535" y="202"/>
         </scene>
-        <!--Item 2-->
+        <!--Account-->
         <scene sceneID="kR4-e8-m7c">
             <objects>
                 <viewController id="OWH-LJ-VoB" sceneMemberID="viewController">
@@ -95,13 +95,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="xMP-EF-trq"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="xMP-EF-trq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWB-qN-FRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-828" y="697"/>
         </scene>
-        <!--Item 1-->
+        <!--Homework-->
         <scene sceneID="bD0-N1-w2z">
             <objects>
                 <viewController id="1U5-lJ-sBi" customClass="ViewController" customModule="Cranbrook" customModuleProvider="target" sceneMemberID="viewController">
@@ -114,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="epU-04-JtT">
-                                <rect key="frame" x="0.0" y="87" width="375" height="580"/>
+                                <rect key="frame" x="0.0" y="73" width="375" height="656"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="shg-tg-6Bc">
@@ -156,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sle-Yr-UTx">
-                                <rect key="frame" x="309" y="30" width="50" height="50"/>
+                                <rect key="frame" x="323" y="44" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="&gt;"/>
                                 <connections>
@@ -174,7 +174,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Tsz-l9-AF8"/>
+                    <tabBarItem key="tabBarItem" title="Homework" id="Tsz-l9-AF8"/>
                     <connections>
                         <outlet property="dateLabel" destination="4tU-Op-RAO" id="xKs-pj-Ew8"/>
                         <outlet property="loading" destination="shg-tg-6Bc" id="yh8-51-SlF"/>
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3R9-Ot-3gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-710" y="-261"/>
+            <point key="canvasLocation" x="-711.20000000000005" y="-261.57635467980299"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="60g-1B-Ztd">
