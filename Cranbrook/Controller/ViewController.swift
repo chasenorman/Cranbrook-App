@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             LoginController.login(username: username, password: password, completionHandler: loginSuccess, failureHandler: loginFailed, networkErrorHandler: networkError)
         }
         else{
-            performSegue(withIdentifier: "login", sender: nil)
+            self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
         }
     }
     
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loginFailed(){
-        performSegue(withIdentifier: "login", sender: nil)
+        self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
     }
     
     func loginSuccess(){
