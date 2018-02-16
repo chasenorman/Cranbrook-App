@@ -98,7 +98,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             request.httpMethod = "GET";
             request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
             
-            URLSession.shared.dataTask(with: request) {(data, response, error) in
+            let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
                     if(httpResponse.statusCode == 200){
                         let test = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String;
@@ -118,7 +118,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }else{
                     LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
                 }
-            }.resume();
+            }
+            task.resume();
         }
     }
     
