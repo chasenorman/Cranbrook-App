@@ -43,17 +43,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             performSegue(withIdentifier: "login", sender: nil)
         }
     }
-<<<<<<< HEAD
-    
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            let refreshControl = UIRefreshControl()
-            refreshControl.addTarget(self, action: #selector(updateHomework), for: .valueChanged)
-            tableView.refreshControl = refreshControl
-        }
-    
-=======
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +52,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.refreshControl = refreshControl
     }
     
->>>>>>> experimental
     @objc func updateHomework(refreshControl: UIRefreshControl) {
         
         getHomework(start: self.selected, end: self.selected)
@@ -104,38 +92,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             networkError()
         }
         else {
-<<<<<<< HEAD
-        print("Refresh worked!")
-        let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
-        var request = URLRequest(url: URL(string: urlString)!);
-        request.httpShouldHandleCookies = true;
-        request.httpMethod = "GET";
-        request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
-        
-        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
-            if let httpResponse = response as? HTTPURLResponse {
-                if(httpResponse.statusCode == 200){
-                    let test = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String;
-                    let formattedString = "{\"homework\":\(test)}";
-                    do{
-                        try self.homework = (JSONSerialization.jsonObject(with: formattedString.data(using: .utf8)!, options: []) as! [String : [[String : Any]]])["homework"]!;
-                        self.finished = [Bool](repeating: false, count: self.homework.count);
-                        DispatchQueue.main.async {
-                            self.loading.stopAnimating();
-                            self.tableView.reloadData();
-                        }
-                    }catch{}
-                }
-                else{
-=======
-            print("Refresh worked!")
             let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
             var request = URLRequest(url: URL(string: urlString)!);
             request.httpShouldHandleCookies = true;
             request.httpMethod = "GET";
             request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
             
-            let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+            URLSession.shared.dataTask(with: request) {(data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
                     if(httpResponse.statusCode == 200){
                         let test = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String;
@@ -153,17 +116,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
                     }
                 }else{
->>>>>>> experimental
                     LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
                 }
-            }
-            task.resume();
+            }.resume();
         }
-<<<<<<< HEAD
-        task.resume();
-        }
-=======
->>>>>>> experimental
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
