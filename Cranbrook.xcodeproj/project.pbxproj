@@ -288,7 +288,7 @@
 				TargetAttributes = {
 					198E7EDE1F54769600255D29 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8GN67288KC;
+						DevelopmentTeam = MM934V475K;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -672,10 +672,10 @@
 			baseConfigurationReference = FF6B94EF2A7565A413B6764A /* Pods-Cranbrook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8GN67288KC;
+				DEVELOPMENT_TEAM = MM934V475K;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Cranbrook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -687,10 +687,10 @@
 			baseConfigurationReference = BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8GN67288KC;
+				DEVELOPMENT_TEAM = MM934V475K;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Cranbrook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
