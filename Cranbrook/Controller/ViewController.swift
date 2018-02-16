@@ -3,6 +3,7 @@
 //  Cranbrook
 //
 //  Created by Chase Norman on 8/28/17.
+//  Edited by Aziz Zaynutdinov.
 //  Copyright © 2017 Chase Norman. All rights reserved.
 //
 
@@ -39,22 +40,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             LoginController.login(username: username, password: password, completionHandler: loginSuccess, failureHandler: loginFailed, networkErrorHandler: networkError)
         }
         else{
-            self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
+            performSegue(withIdentifier: "login", sender: nil)
         }
+    }
     
+    override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(updateHomework), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc func updateHomework(refreshControl: UIRefreshControl) {
+        
+        getHomework(start: self.selected, end: self.selected)
+        refreshControl.endRefreshing()
     }
     
     func networkError(){
-        DispatchQueue.main.async{
-            let errorBanner = Banner(title: "Error", subtitle: "You are offline.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
-            errorBanner.dismissesOnTap = true
-            errorBanner.show(duration: 3.0)
-        }
+        let errorBanner = Banner(title: "Error", subtitle: "You are offline.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+        errorBanner.dismissesOnTap = true
+        errorBanner.show(duration: 3.0)
     }
     
     func loginFailed(){
-        self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
+        performSegue(withIdentifier: "login", sender: nil)
     }
     
     func loginSuccess(){
@@ -77,33 +88,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func getHomework(start: Date, end: Date) {
-        let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
-        var request = URLRequest(url: URL(string: urlString)!);
-        request.httpShouldHandleCookies = true;
-        request.httpMethod = "GET";
-        request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
-        
-        URLSession.shared.dataTask(with: request) {(data, response, error) in
-            if let httpResponse = response as? HTTPURLResponse {
-                if(httpResponse.statusCode == 200){
-                    let test = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String;
-                    let formattedString = "{\"homework\":\(test)}";
-                    do{
-                        try self.homework = (JSONSerialization.jsonObject(with: formattedString.data(using: .utf8)!, options: []) as! [String : [[String : Any]]])["homework"]!;
-                        self.finished = [Bool](repeating: false, count: self.homework.count);
-                        DispatchQueue.main.async {
-                            self.loading.stopAnimating();
-                            self.tableView.reloadData();
-                        }
-                    }catch{}
-                }
-                else{
+        if Reachability.isConnectedToNetwork() == false{
+            networkError()
+        }
+        else {
+            print("Refresh worked!")
+            let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
+            var request = URLRequest(url: URL(string: urlString)!);
+            request.httpShouldHandleCookies = true;
+            request.httpMethod = "GET";
+            request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
+            
+            let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+                if let httpResponse = response as? HTTPURLResponse {
+                    if(httpResponse.statusCode == 200){
+                        let test = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String;
+                        let formattedString = "{\"homework\":\(test)}";
+                        do{
+                            try self.homework = (JSONSerialization.jsonObject(with: formattedString.data(using: .utf8)!, options: []) as! [String : [[String : Any]]])["homework"]!;
+                            self.finished = [Bool](repeating: false, count: self.homework.count);
+                            DispatchQueue.main.async {
+                                self.loading.stopAnimating();
+                                self.tableView.reloadData();
+                            }
+                        }catch{}
+                    }
+                    else{
+                        LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
+                    }
+                }else{
                     LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
                 }
-            }else{
-                LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
             }
-        }.resume();
+            task.resume();
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -153,7 +171,7 @@ extension String {
             NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,
             NSAttributedString.DocumentReadingOptionKey.characterEncoding : String.Encoding.utf8.rawValue
         ]
-
+        
         if let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil){
             self.init(attributedString.string)
         }

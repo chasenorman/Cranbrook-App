@@ -27,7 +27,7 @@ class LoginController : UIViewController{
         usernameField.isUserInteractionEnabled = false;
         passwordField.isUserInteractionEnabled = false;
         loading.startAnimating();
-        LoginController.login(username: usernameField.text!, password: passwordField.text!, completionHandler: loginSuccess, failureHandler: loginFailure, networkErrorHandler: loginFailure)
+        LoginController.login(username: usernameField.text!, password: passwordField.text!, completionHandler: loginSuccess, failureHandler: loginFailure, networkErrorHandler: networkError)
     }
     
     func loginSuccess(){
@@ -83,6 +83,7 @@ class LoginController : UIViewController{
             else{
                 networkErrorHandler();
             }
-        }.resume();
+            }.resume();
     }
 }
+
