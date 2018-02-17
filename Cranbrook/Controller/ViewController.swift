@@ -56,7 +56,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @objc func updateHomework(refreshControl: UIRefreshControl) {
         getHomework(start: self.selected, end: self.selected)
-        refreshControl.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?{
@@ -139,6 +138,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             self.loading.stopAnimating();
                             self.tableView.reloadData();
                             self.noHomeworkLabel.isHidden = self.homework.count == 0 ? false : true;
+                            self.tableView.refreshControl!.endRefreshing();
                         }
                     }
                     else{
