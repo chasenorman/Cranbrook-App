@@ -14,11 +14,11 @@
 		198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE21F54769600255D29 /* AppDelegate.swift */; };
 		198E7EE51F54769600255D29 /* HomeworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EE41F54769600255D29 /* HomeworkController.swift */; };
 		198E7EE81F54769600255D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE61F54769600255D29 /* Main.storyboard */; };
+		198E7EEA1F54769600255D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE91F54769600255D29 /* Assets.xcassets */; };
 		198E7EF81F54769600255D29 /* CranbrookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EF71F54769600255D29 /* CranbrookTests.swift */; };
 		198E7F031F54769600255D29 /* CranbrookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7F021F54769600255D29 /* CranbrookUITests.swift */; };
 		8705AA2A203659AE00B5FBF7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8705AA29203659AE00B5FBF7 /* Reachability.swift */; };
-		875513232037C8AD00AD9401 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875513222037C8AD00AD9401 /* TableViewController.swift */; };
-		879A990A2037E12D002A72B6 /* appIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A99092037E12D002A72B6 /* appIcon.xcassets */; };
+		875513232037C8AD00AD9401 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875513222037C8AD00AD9401 /* AccountController.swift */; };
 		8BFDDD5B8C718E9E25710CAD /* Pods_CranbrookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */; };
 		9769675B09A095772B1693C0 /* Pods_Cranbrook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4411F7CA93F8FB62FD963DF7 /* Pods_Cranbrook.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +49,7 @@
 		198E7EE21F54769600255D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198E7EE41F54769600255D29 /* HomeworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkController.swift; sourceTree = "<group>"; };
 		198E7EE71F54769600255D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		198E7EE91F54769600255D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		198E7EEE1F54769600255D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		198E7EF31F54769600255D29 /* CranbrookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CranbrookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		198E7EF71F54769600255D29 /* CranbrookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CranbrookTests.swift; sourceTree = "<group>"; };
@@ -61,8 +62,7 @@
 		660AC0A8AE8389EB3A352FF8 /* Pods-CranbrookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8705AA29203659AE00B5FBF7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		875513222037C8AD00AD9401 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		879A99092037E12D002A72B6 /* appIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = appIcon.xcassets; sourceTree = "<group>"; };
+		875513222037C8AD00AD9401 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook.release.xcconfig"; sourceTree = "<group>"; };
 		BF2706C958988131CE2F1F6C /* Pods-CranbrookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4182CCFFFA9A8CD0494D785 /* Pods_CranbrookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CranbrookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +202,7 @@
 		87A0EAE420339C3300BB6DDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				879A99092037E12D002A72B6 /* appIcon.xcassets */,
+				198E7EE91F54769600255D29 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -339,7 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879A990A2037E12D002A72B6 /* appIcon.xcassets in Resources */,
+				198E7EEA1F54769600255D29 /* Assets.xcassets in Resources */,
 				198E7EE81F54769600255D29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,8 +680,7 @@
 			baseConfigurationReference = FF6B94EF2A7565A413B6764A /* Pods-Cranbrook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = MM934V475K;
+				DEVELOPMENT_TEAM = 8GN67288KC;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cranbrook;
@@ -696,12 +695,7 @@
 			baseConfigurationReference = BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 8GN67288KC;
-=======
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = MM934V475K;
->>>>>>> ae3dd0eef8cfddb8a4c65083db29ae6c98af2008
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cranbrook;
