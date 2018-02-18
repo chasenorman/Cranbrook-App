@@ -11,6 +11,7 @@ import UIKit
 import BRYXBanner
 
 class HomeworkController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     var homework: [Homework] = [];
     var finished: [UIColor] = [];
     
