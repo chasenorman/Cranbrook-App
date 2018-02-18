@@ -26,24 +26,24 @@
                                 <rect key="frame" x="0.0" y="389.66666666666674" width="375" height="388.33333333333326"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cranbrook Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-kw-wpj">
-                                        <rect key="frame" x="64.333333333333314" y="69.666666666666629" width="246" height="249"/>
+                                        <rect key="frame" x="81.666666666666686" y="105" width="213" height="179"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="249" id="PLM-Xh-z1P"/>
-                                            <constraint firstAttribute="width" constant="246" id="T61-Uk-Plt"/>
+                                            <constraint firstAttribute="width" constant="213" id="1yo-CI-cBX"/>
+                                            <constraint firstAttribute="height" constant="179" id="BFx-QS-fQu"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="mbB-kw-wpj" firstAttribute="centerY" secondItem="fOY-IP-Mrd" secondAttribute="centerY" id="FJG-xn-zIv"/>
-                                    <constraint firstItem="mbB-kw-wpj" firstAttribute="centerX" secondItem="fOY-IP-Mrd" secondAttribute="centerX" id="noM-Tc-szn"/>
+                                    <constraint firstItem="mbB-kw-wpj" firstAttribute="centerY" secondItem="fOY-IP-Mrd" secondAttribute="centerY" id="nRP-wh-FX8"/>
+                                    <constraint firstItem="mbB-kw-wpj" firstAttribute="centerX" secondItem="fOY-IP-Mrd" secondAttribute="centerX" id="rCh-Pq-gpp"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7r-dN-km1" userLabel="Top Container">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N7H-Jh-frC">
-                                        <rect key="frame" x="78.333333333333314" y="126.33333333333331" width="220" height="30"/>
+                                        <rect key="frame" x="77.666666666666686" y="126.66666666666669" width="220" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="hJx-6V-rNt"/>
                                             <constraint firstAttribute="width" constant="220" id="rHH-DC-gAu"/>
@@ -53,7 +53,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Rw-tUS">
-                                        <rect key="frame" x="78.333333333333314" y="74.333333333333329" width="220" height="30"/>
+                                        <rect key="frame" x="77.666666666666686" y="74.666666666666671" width="220" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="CUA-m3-2WX"/>
                                             <constraint firstAttribute="height" constant="30" id="xZi-Gp-fWj"/>
@@ -63,7 +63,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojp-6Q-dQF">
-                                        <rect key="frame" x="135.33333333333334" y="194.33333333333334" width="106" height="30"/>
+                                        <rect key="frame" x="134.66666666666666" y="194.66666666666666" width="106" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="106" id="T8a-cQ-ZXR"/>
                                             <constraint firstAttribute="height" constant="30" id="hPA-gZ-WTS"/>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ax3-uM-NxD">
-                                        <rect key="frame" x="178.33333333333334" y="266.33333333333331" width="20" height="20"/>
+                                        <rect key="frame" x="177.66666666666666" y="266.66666666666669" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="L3i-mF-TeQ"/>
                                             <constraint firstAttribute="width" constant="20" id="NdN-hi-XiA"/>
@@ -116,12 +116,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hff-N9-aBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2535.1999999999998" y="201.72413793103451"/>
+            <point key="canvasLocation" x="-2536.231884057971" y="201.35869565217394"/>
         </scene>
         <!--Homework-->
         <scene sceneID="bD0-N1-w2z">
             <objects>
-                <viewController id="1U5-lJ-sBi" customClass="ViewController" customModule="Cranbrook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1U5-lJ-sBi" customClass="HomeworkController" customModule="Cranbrook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aLC-Ng-9ku"/>
                         <viewControllerLayoutGuide type="bottom" id="VeF-M2-Jvy"/>
@@ -138,7 +138,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="LHW-QN-swJ" detailTextLabel="dZV-87-mhB" rowHeight="107" style="IBUITableViewCellStyleSubtitle" id="bn1-KG-lje" customClass="HomeworkCell" customModule="Cranbrook" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="LHW-QN-swJ" detailTextLabel="dZV-87-mhB" rowHeight="107" style="IBUITableViewCellStyleSubtitle" id="bn1-KG-lje" customClass="HomeworkCell" customModule="Cranbrook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="107"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bn1-KG-lje" id="unQ-fa-gdo">
