@@ -11,7 +11,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-let SIGN_OUT_URL = "https://[school].myschoolapp.com/api/authentication/logout/?t="
+let SIGN_OUT_URL = "https://cranbrook.myschoolapp.com/api/authentication/logout/?t="
 
 class AccountController : UITableViewController {
     

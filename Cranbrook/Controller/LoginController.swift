@@ -32,11 +32,7 @@ class LoginController : UIViewController{
             let responseJSON = response.result.value!
             if responseJSON.range(of: "\"TokenId\":0") != nil
             {
-                let startResponseJSON = responseJSON.index(responseJSON.startIndex, offsetBy: 10)
-                let endResponseJSON = responseJSON.index(responseJSON.endIndex, offsetBy: -31)
-                let range = startResponseJSON..<endResponseJSON
-                let responseJSONtoken = responseJSON [range]
-                UserDefaults.standard.set(responseJSONtoken, forKey: "token")
+                UserDefaults.standard.set(responseJSON [responseJSON.index(responseJSON.startIndex, offsetBy: 10)..<responseJSON.index(responseJSON.endIndex, offsetBy: -31)], forKey: "token")
                 self.performSegue(withIdentifier: "enter", sender: self)
             }
             else {
