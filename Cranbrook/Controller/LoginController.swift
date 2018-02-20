@@ -10,7 +10,10 @@
 import Foundation
 import UIKit
 import BRYXBanner
+import Alamofire
+import SwiftyJSON
 
+let LOGIN_URL = "https://cranbrook.myschoolapp.com/api/authentication/login/"
 
 class LoginController : UIViewController{
     @IBOutlet weak var usernameField: UITextField!
@@ -23,22 +26,31 @@ class LoginController : UIViewController{
         loading.hidesWhenStopped = true;
     }
     
+    func performLogin (url : String, parameters : [String : String]){
+        Alamofire.request(url, method: .get, parameters: parameters).responseString {
+            response in
+            let responseJSON = response.result.value!
+            if responseJSON.range(of: "\"TokenId\":0") != nil
+            {
+                let startResponseJSON = responseJSON.index(responseJSON.startIndex, offsetBy: 10)
+                let endResponseJSON = responseJSON.index(responseJSON.endIndex, offsetBy: -31)
+                let range = startResponseJSON..<endResponseJSON
+                let responseJSONtoken = responseJSON [range]
+                UserDefaults.standard.set(responseJSONtoken, forKey: "token")
+                self.performSegue(withIdentifier: "enter", sender: self)
+            }
+            else {
+                self.loginFailure()
+            }
+        }
+    }
+    
     @IBAction func loginPressed(_ sender: UIButton) {
         usernameField.isUserInteractionEnabled = false;
         passwordField.isUserInteractionEnabled = false;
         loading.startAnimating();
-        LoginController.login(username: usernameField.text!, password: passwordField.text!, completionHandler: loginSuccess, failureHandler: loginFailure, networkErrorHandler: networkError)
-    }
-    
-    func loginSuccess(){
-        DispatchQueue.main.async{
-            self.usernameField.isUserInteractionEnabled = true;
-            self.passwordField.isUserInteractionEnabled = true;
-            self.loading.stopAnimating();
-            UserDefaults.standard.set(self.usernameField.text!,forKey: "username");
-            UserDefaults.standard.set(self.passwordField.text!, forKey: "password");
-            self.performSegue(withIdentifier: "enter", sender: nil);
-        }
+        let params : [String : String] = ["username" : self.usernameField.text!, "password" : self.passwordField.text!]
+        performLogin(url: LOGIN_URL, parameters: params)
     }
     
     func loginFailure(){
@@ -50,40 +62,6 @@ class LoginController : UIViewController{
             errorBanner.dismissesOnTap = true
             errorBanner.show(duration: 3.0)
         }
-    }
-    
-    func networkError(){
-        DispatchQueue.main.async{
-            self.usernameField.isUserInteractionEnabled = true;
-            self.passwordField.isUserInteractionEnabled = true;
-            self.loading.stopAnimating();
-            let errorBanner = Banner(title: "Error", subtitle: "You are offline.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
-            errorBanner.dismissesOnTap = true
-            errorBanner.show(duration: 3.0)
-        }
-    }
-    
-    static func login(username: String, password: String, completionHandler: @escaping ()->Void, failureHandler: @escaping ()->Void, networkErrorHandler: @escaping ()->Void){
-        var request = URLRequest(url: URL(string: "https://cranbrook.myschoolapp.com/api/SignIn")!);
-        request.httpMethod = "POST";
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type");
-        let json: [String:Any] = ["From":"","Username":username,"Password":password,"remember":false,"InterfaceSource":"WebApp"];
-        let jsonData = try? JSONSerialization.data(withJSONObject: json);
-        request.httpBody = jsonData;
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let str = response?.description{
-                if let index = str.range(of:"\"t=")?.upperBound{
-                    UserDefaults.standard.set(String(str[index..<str.index(index,offsetBy: 36)]), forKey: "token");
-                    completionHandler();
-                }
-                else{
-                    failureHandler();
-                }
-            }
-            else{
-                networkErrorHandler();
-            }
-        }.resume();
     }
 }
 

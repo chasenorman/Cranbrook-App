@@ -11,26 +11,22 @@ import UIKit
 import BRYXBanner
 
 class HomeworkController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var homework: [Homework] = [];
-    var finished: [UIColor] = [];
+    
+    // Declare all global variables and constants.
+    var homework: [Homework] = []
+    var finished: [UIColor] = []
+    let formatDate = DateFormatter()
+    let readDate = DateFormatter()
+    var selected: Date = Date()
     
     @IBOutlet weak var tableView: UITableView!
-    
-    let formatDate = DateFormatter();
-    let readDate = DateFormatter();
-    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var noHomeworkLabel: UILabel!
     
-    var selected: Date = Date();
-    
     override func viewDidAppear(_ animated: Bool) {
         if UserDefaults.standard.string(forKey:"token") != nil{
-            loginSuccess();
-        }
-        else if let username = UserDefaults.standard.string(forKey: "username"), let password = UserDefaults.standard.string(forKey: "password"){
-            LoginController.login(username: username, password: password, completionHandler: loginSuccess, failureHandler: loginFailed, networkErrorHandler: networkError)
+            loginSuccess()
         }
         else{
             self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
@@ -118,7 +114,7 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
         dateChanged();
     }
     
-    func getHomework(start: Date, end: Date) {
+   func getHomework(start: Date, end: Date) {
         if Reachability.isConnectedToNetwork() == false{
             networkError()
         }
@@ -141,11 +137,6 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
                             self.tableView.refreshControl!.endRefreshing();
                         }
                     }
-                    else{
-                        LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
-                    }
-                }else{
-                    LoginController.login(username: UserDefaults.standard.string(forKey: "username")!, password: UserDefaults.standard.string(forKey: "password")!, completionHandler: self.loginSuccess, failureHandler: self.loginFailed, networkErrorHandler: self.networkError);
                 }
             }.resume();
         }

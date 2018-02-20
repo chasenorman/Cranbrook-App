@@ -7,6 +7,11 @@
 //  Copyright © 2018 Chase Norman. All rights reserved.
 //
 import UIKit
+import Foundation
+import Alamofire
+import SwiftyJSON
+
+let SIGN_OUT_URL = "https://[school].myschoolapp.com/api/authentication/logout/?t="
 
 class AccountController : UITableViewController {
     
@@ -19,10 +24,13 @@ class AccountController : UITableViewController {
         // Dispose of any resources that can be recreated
     }
     
+    func performSignOut (url : String, parameters : [String : String]){
+        Alamofire.request(url, method: .get, parameters: parameters).responseString 
+    }
+    
     @IBAction func signOut(_ sender: UIButton) {
-        UserDefaults.standard.removeObject(forKey: "username");
-        UserDefaults.standard.removeObject(forKey: "password")
-        UserDefaults.standard.removeObject(forKey: "token")
-        performSegue(withIdentifier: "signOut", sender: nil)
+            let params : [String : String] = ["token" : UserDefaults.standard.string(forKey: "token")!]
+            performSignOut(url: SIGN_OUT_URL, parameters: params)
+            performSegue(withIdentifier: "signOut", sender: nil)
     }
 }
