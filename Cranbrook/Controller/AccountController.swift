@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 import SmileLock
 
-let SIGN_OUT_URL = "https://[school].myschoolapp.com/api/authentication/logout/?t="
+let SIGN_OUT_URL = "https://cranbrook.myschoolapp.com/api/authentication/logout/?t="
 
 class AccountController : UITableViewController {
     let passwordContainerView = PasswordContainerView.create(withDigit: 7)
