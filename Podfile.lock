@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (4.6.0)
   - BRYXBanner (0.8.0)
+  - SmileLock (3.0.2)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - BRYXBanner
+  - SmileLock
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   BRYXBanner: 406c3775789136531da6f3c98058be2f16e08a34
+  SmileLock: c03dc80d208b33731606e996f5c3fed61255cf59
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: a8e9b2bff864136dc9c139856876390df387a3e7
+PODFILE CHECKSUM: 77c5ad00152b1ec244ea979321c858431047059a
 
 COCOAPODS: 1.4.0

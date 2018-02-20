@@ -264,11 +264,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ux-zj-xTc">
-                                                    <rect key="frame" x="152.66666666666666" y="6" width="70" height="33"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ux-zj-xTc">
+                                                    <rect key="frame" x="0.0" y="6" width="375" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="FlR-v4-8tC"/>
-                                                        <constraint firstAttribute="width" constant="70" id="ojV-vN-ch6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Sign-Out">
@@ -283,6 +282,36 @@
                                             <constraints>
                                                 <constraint firstItem="3ux-zj-xTc" firstAttribute="centerY" secondItem="sgJ-gL-md8" secondAttribute="centerY" id="CIE-uG-4PO"/>
                                                 <constraint firstItem="3ux-zj-xTc" firstAttribute="centerX" secondItem="sgJ-gL-md8" secondAttribute="centerX" id="aFo-KS-ft5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Barcode" id="XFk-l1-H6T">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YYO-yq-5HW">
+                                        <rect key="frame" x="0.0" y="155.33333333333334" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YYO-yq-5HW" id="QJc-FB-Ib3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-aK-MqB">
+                                                    <rect key="frame" x="0.0" y="6" width="375" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="Lph-yQ-ob8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="Input Student ID"/>
+                                                    <connections>
+                                                        <action selector="inputID:" destination="zLW-N6-aC1" eventType="touchUpInside" id="YrF-i3-heq"/>
+                                                        <action selector="signOutButton:" destination="zLW-N6-aC1" eventType="touchUpInside" id="tvm-zc-rJp"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BJG-aK-MqB" firstAttribute="centerX" secondItem="QJc-FB-Ib3" secondAttribute="centerX" id="5UW-yw-uJK"/>
+                                                <constraint firstItem="BJG-aK-MqB" firstAttribute="centerY" secondItem="QJc-FB-Ib3" secondAttribute="centerY" id="Xkz-KI-EPz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -308,6 +337,6 @@
         <image name="icons8-settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Oih-mb-S5C"/>
+        <segue reference="mb4-CZ-VBC"/>
     </inferredMetricsTieBreakers>
 </document>

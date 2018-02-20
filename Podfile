@@ -9,6 +9,7 @@ target 'Cranbrook' do
 pod 'BRYXBanner'
 pod 'SwiftyJSON'
 pod 'Alamofire'
+pod 'SmileLock'
 
   target 'CranbrookTests' do
     inherit! :search_paths

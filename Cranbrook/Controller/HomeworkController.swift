@@ -26,7 +26,7 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         if UserDefaults.standard.string(forKey:"token") != nil{
-            loginSuccess()
+            dateChanged();
         }
         else{
             self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
@@ -117,29 +117,31 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
    func getHomework(start: Date, end: Date) {
         if Reachability.isConnectedToNetwork() == false{
             networkError()
+            return;
         }
-        else {
-            let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
-            var request = URLRequest(url: URL(string: urlString)!);
-            request.httpShouldHandleCookies = true;
-            request.httpMethod = "GET";
-            request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
+    
+        let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
+        var request = URLRequest(url: URL(string: urlString)!);
+        request.httpShouldHandleCookies = true;
+        request.httpMethod = "GET";
+        request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
             
-            URLSession.shared.dataTask(with: request) {(data, response, error) in
-                if let httpResponse = response as? HTTPURLResponse {
-                    if(httpResponse.statusCode == 200){
-                        do{try self.homework = JSONDecoder().decode([Homework].self, from: data!);}catch{}
-                        self.finished = [UIColor](repeating: UIColor.white, count: self.homework.count);
-                        DispatchQueue.main.async {
-                            self.loading.stopAnimating();
-                            self.tableView.reloadData();
-                            self.noHomeworkLabel.isHidden = self.homework.count == 0 ? false : true;
-                            self.tableView.refreshControl!.endRefreshing();
-                        }
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            if let httpResponse = response as? HTTPURLResponse {
+                if(httpResponse.statusCode == 200){
+                    do{try self.homework = JSONDecoder().decode([Homework].self, from: data!);}catch{}
+                    self.finished = [UIColor](repeating: UIColor.white, count: self.homework.count);
+                    DispatchQueue.main.async {
+                        self.loading.stopAnimating();
+                        self.tableView.reloadData();
+                        self.noHomeworkLabel.isHidden = self.homework.count == 0 ? false : true;
+                        self.tableView.refreshControl!.endRefreshing();
                     }
+                }else{
+                    LoginController.login(completionHandler: self.loginSuccess, loginErrorHandler: self.loginFailed, networkErrorHandler: self.networkError);
                 }
-            }.resume();
-        }
+            }
+        }.resume();
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -10,12 +10,15 @@ import UIKit
 import Foundation
 import Alamofire
 import SwiftyJSON
+import SmileLock
 
 let SIGN_OUT_URL = "https://[school].myschoolapp.com/api/authentication/logout/?t="
 
 class AccountController : UITableViewController {
+    let passwordContainerView = PasswordContainerView.create(withDigit: 7)
     
     override func viewDidLoad() {
+        passwordContainerView.delegate = self
         super.viewDidLoad()
     }
     
@@ -29,8 +32,23 @@ class AccountController : UITableViewController {
     }
     
     @IBAction func signOut(_ sender: UIButton) {
-            let params : [String : String] = ["token" : UserDefaults.standard.string(forKey: "token")!]
-            performSignOut(url: SIGN_OUT_URL, parameters: params)
-            performSegue(withIdentifier: "signOut", sender: nil)
+        let params : [String : String] = ["token" : UserDefaults.standard.string(forKey: "token")!]
+        performSignOut(url: SIGN_OUT_URL, parameters: params)
+        performSegue(withIdentifier: "signOut", sender: nil)
+    }
+    
+    @IBAction func inputID(_ sender: UIButton) {
+        
+    }
+}
+
+extension AccountController: PasswordInputCompleteProtocol {
+    func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: Error?) {
+        
+    }
+    
+    func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String) {
+        print("input completed -> \(input)")
+        //handle validation wrong || success
     }
 }

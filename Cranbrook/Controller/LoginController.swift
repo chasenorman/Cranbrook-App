@@ -26,10 +26,16 @@ class LoginController : UIViewController{
         loading.hidesWhenStopped = true;
     }
     
-    func performLogin (url : String, parameters : [String : String]){
-        Alamofire.request(url, method: .get, parameters: parameters).responseString {
+    static func login(completionHandler: @escaping ()->Void, loginErrorHandler: @escaping ()->Void, networkErrorHandler: ()->Void){
+        if !Reachability.isConnectedToNetwork(){
+            networkErrorHandler()
+            return;
+        }
+        Alamofire.request(LOGIN_URL, method: .post, parameters:
+            ["username" : UserDefaults.standard.string(forKey: "username")!, "password" : UserDefaults.standard.string(forKey: "password")!, "InterfaceSource":"WebApp", "remember":false, "From":""] ).responseString {
             response in
             let responseJSON = response.result.value!
+                print(responseJSON);
             if responseJSON.range(of: "\"TokenId\":0") != nil
             {
                 let startResponseJSON = responseJSON.index(responseJSON.startIndex, offsetBy: 10)
@@ -37,10 +43,10 @@ class LoginController : UIViewController{
                 let range = startResponseJSON..<endResponseJSON
                 let responseJSONtoken = responseJSON [range]
                 UserDefaults.standard.set(responseJSONtoken, forKey: "token")
-                self.performSegue(withIdentifier: "enter", sender: self)
+                completionHandler();
             }
             else {
-                self.loginFailure()
+                loginErrorHandler();
             }
         }
     }
@@ -49,8 +55,9 @@ class LoginController : UIViewController{
         usernameField.isUserInteractionEnabled = false;
         passwordField.isUserInteractionEnabled = false;
         loading.startAnimating();
-        let params : [String : String] = ["username" : self.usernameField.text!, "password" : self.passwordField.text!]
-        performLogin(url: LOGIN_URL, parameters: params)
+        UserDefaults.standard.set(self.usernameField.text!, forKey: "username");
+        UserDefaults.standard.set(self.passwordField.text!, forKey: "password");
+        LoginController.login(completionHandler: loginSuccess, loginErrorHandler: loginFailure, networkErrorHandler: networkError);
     }
     
     func loginFailure(){
@@ -62,6 +69,21 @@ class LoginController : UIViewController{
             errorBanner.dismissesOnTap = true
             errorBanner.show(duration: 3.0)
         }
+    }
+    
+    func networkError(){
+        DispatchQueue.main.async{
+            self.usernameField.isUserInteractionEnabled = true;
+            self.passwordField.isUserInteractionEnabled = true;
+            self.loading.stopAnimating();
+            let errorBanner = Banner(title: "Error", subtitle: "No connection.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+            errorBanner.dismissesOnTap = true
+            errorBanner.show(duration: 3.0)
+        }
+    }
+    
+    func loginSuccess(){
+        self.performSegue(withIdentifier: "enter", sender: self)
     }
 }
 
