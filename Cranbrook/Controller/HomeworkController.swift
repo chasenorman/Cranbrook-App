@@ -56,7 +56,7 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?{
         
-        let moreRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Complete", handler:{action, indexpath in
+        let completeRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Complete", handler:{action, indexpath in
             DispatchQueue.main.async{
                 if(self.finished[indexPath.row] != UIColor(red: 0.298, green: 0.851, blue: 0.3922, alpha: 1.0)){
                     self.finished[indexPath.row] = UIColor(red: 0.298, green: 0.851, blue: 0.3922, alpha: 1.0);
@@ -67,7 +67,7 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData();
             }
         });
-        moreRowAction.backgroundColor = UIColor(red: 0.298, green: 0.851, blue: 0.3922, alpha: 1.0);
+        completeRowAction.backgroundColor = UIColor(red: 0.298, green: 0.851, blue: 0.3922, alpha: 1.0);
         
         let toDoRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "To-Do", handler:{action, indexpath in
             DispatchQueue.main.async{
@@ -82,7 +82,7 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
         });
         toDoRowAction.backgroundColor = UIColor.orange;
         
-        return [toDoRowAction, moreRowAction];
+        return [completeRowAction, toDoRowAction];
     }
     
     func networkError(){
@@ -167,6 +167,37 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
             self.getHomework(start: self.selected, end: self.selected)
         }
     }
+    
+    //k there's this thing called a user id which is different from your account and your student id, and we need to know it in order to access schedules. I want to make it so that it shows what kind of day it is.
+    /*func getDay(start: Date) {
+        if Reachability.isConnectedToNetwork() == false{
+            networkError()
+            return;
+        }
+        
+        let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: start))&persona=2&statusList=&sectionList=";
+        var request = URLRequest(url: URL(string: urlString)!);
+        request.httpShouldHandleCookies = true;
+        request.httpMethod = "GET";
+        request.setValue("t=\(UserDefaults.standard.string(forKey:"token")!)", forHTTPHeaderField: "cookie");
+        
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            if let httpResponse = response as? HTTPURLResponse {
+                if(httpResponse.statusCode == 200){
+                    do{try self.homework = JSONDecoder().decode([Homework].self, from: data!);}catch{}
+                    self.finished = [UIColor](repeating: UIColor.white, count: self.homework.count);
+                    DispatchQueue.main.async {
+                        self.loading.stopAnimating();
+                        self.tableView.reloadData();
+                        self.noHomeworkLabel.isHidden = self.homework.count == 0 ? false : true;
+                        self.tableView.refreshControl!.endRefreshing();
+                    }
+                }else{
+                    LoginController.login(completionHandler: self.loginSuccess, loginErrorHandler: self.loginFailed, networkErrorHandler: self.networkError);
+                }
+            }
+        }.resume();
+    }*/
 }
 
 

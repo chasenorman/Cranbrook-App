@@ -35,7 +35,6 @@ class LoginController : UIViewController{
             ["username" : UserDefaults.standard.string(forKey: "username")!, "password" : UserDefaults.standard.string(forKey: "password")!, "InterfaceSource":"WebApp", "remember":false, "From":""] ).responseString {
             response in
             let responseJSON = response.result.value!
-                print(responseJSON);
             if responseJSON.range(of: "\"TokenId\":0") != nil
             {
                 UserDefaults.standard.set(responseJSON [responseJSON.index(responseJSON.startIndex, offsetBy: 10)..<responseJSON.index(responseJSON.endIndex, offsetBy: -31)], forKey: "token")
@@ -72,7 +71,7 @@ class LoginController : UIViewController{
             self.usernameField.isUserInteractionEnabled = true;
             self.passwordField.isUserInteractionEnabled = true;
             self.loading.stopAnimating();
-            let errorBanner = Banner(title: "Error", subtitle: "No connection.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
+            let errorBanner = Banner(title: "Error", subtitle: "You are offline.", image: nil, backgroundColor: UIColor.red, didTapBlock: nil)
             errorBanner.dismissesOnTap = true
             errorBanner.show(duration: 3.0)
         }

@@ -60,7 +60,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="username"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojp-6Q-dQF">
                                         <rect key="frame" x="134.66666666666666" y="194.66666666666666" width="106" height="30"/>
@@ -199,7 +199,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FvI-vZ-Csx" firstAttribute="centerX" secondItem="mtN-Uc-5ip" secondAttribute="centerX" id="59c-0d-b0F"/>
                             <constraint firstItem="ZJf-hP-OTl" firstAttribute="top" secondItem="aLC-Ng-9ku" secondAttribute="bottom" constant="17" id="9cv-yH-V18"/>
@@ -249,7 +249,7 @@
         <!--Settings-->
         <scene sceneID="1MI-f1-maQ">
             <objects>
-                <tableViewController id="vOX-uK-8pj" sceneMemberID="viewController">
+                <tableViewController id="vOX-uK-8pj" customClass="AccountController" customModule="Cranbrook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Oi8-jR-ein">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,7 +265,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ux-zj-xTc">
-                                                    <rect key="frame" x="0.0" y="6" width="375" height="33"/>
+                                                    <rect key="frame" x="103" y="6" width="170" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="FlR-v4-8tC"/>
                                                     </constraints>
@@ -274,8 +274,8 @@
                                                         <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="signOutButton:" destination="zLW-N6-aC1" eventType="touchUpInside" id="agC-Oe-31K"/>
-                                                        <segue destination="G0Q-6G-Rjb" kind="show" identifier="signOut" id="mb4-CZ-VBC"/>
+                                                        <action selector="signOut:" destination="zLW-N6-aC1" eventType="touchUpInside" id="5eS-FR-VDt"/>
+                                                        <action selector="signOut:" destination="vOX-uK-8pj" eventType="touchUpInside" id="xbm-U0-UOQ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -297,15 +297,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-aK-MqB">
-                                                    <rect key="frame" x="0.0" y="6" width="375" height="33"/>
+                                                    <rect key="frame" x="117" y="6" width="140" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="Lph-yQ-ob8"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Input Student ID"/>
                                                     <connections>
-                                                        <action selector="inputID:" destination="zLW-N6-aC1" eventType="touchUpInside" id="YrF-i3-heq"/>
-                                                        <action selector="signOutButton:" destination="zLW-N6-aC1" eventType="touchUpInside" id="tvm-zc-rJp"/>
+                                                        <action selector="inputID:" destination="vOX-uK-8pj" eventType="touchUpInside" id="kkL-Tk-o8P"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -330,13 +329,96 @@
             </objects>
             <point key="canvasLocation" x="-711.20000000000005" y="564.53201970443354"/>
         </scene>
+        <!--Blur Password Login View Controller-->
+        <scene sceneID="Ska-XS-0SH">
+            <objects>
+                <viewController storyboardIdentifier="BlurPasswordLoginViewController" id="g3X-jI-Wcf" customClass="BlurPasswordLoginViewController" customModule="Cranbrook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cqq-he-ot6"/>
+                        <viewControllerLayoutGuide type="bottom" id="p8H-aW-m3U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ebq-Ds-Cgc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Et6-ac-JKt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="866"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3Px-Ul-tzS">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="866"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sec-r4-gIL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="866"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Gbr-Vp-1H4">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="866"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="9JT-5O-fZx">
+                                                        <rect key="frame" x="178" y="427" width="250.33333333333337" height="45.666666666666686"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="wna-no-Q6U">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250.33333333333334" height="45.666666666666664"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uw1-Kq-2xS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="250.33333333333334" height="45.666666666666664"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Student ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z17-zd-Jo5">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="250.33333333333334" height="45.666666666666664"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="38"/>
+                                                                                <color key="textColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="9JT-5O-fZx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gbr-Vp-1H4" secondAttribute="leading" constant="50" id="Hsf-WO-hUQ"/>
+                                                    <constraint firstItem="9JT-5O-fZx" firstAttribute="centerX" secondItem="Gbr-Vp-1H4" secondAttribute="centerX" id="VSB-nu-z0e"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9JT-5O-fZx" secondAttribute="trailing" constant="50" id="lY1-JF-XX3"/>
+                                                    <constraint firstItem="9JT-5O-fZx" firstAttribute="centerY" secondItem="Gbr-Vp-1H4" secondAttribute="centerY" id="zH3-vC-5As"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="dark"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sec-r4-gIL" firstAttribute="top" secondItem="3Px-Ul-tzS" secondAttribute="top" id="Lp1-uF-ok5"/>
+                                        <constraint firstAttribute="bottom" secondItem="Sec-r4-gIL" secondAttribute="bottom" id="VZM-8b-xZB"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sec-r4-gIL" secondAttribute="trailing" id="jKD-pk-cUE"/>
+                                        <constraint firstItem="Sec-r4-gIL" firstAttribute="leading" secondItem="3Px-Ul-tzS" secondAttribute="leading" id="kai-Jr-T4G"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Et6-ac-JKt" firstAttribute="leading" secondItem="ebq-Ds-Cgc" secondAttribute="leading" id="HwA-ak-hFo"/>
+                            <constraint firstItem="Et6-ac-JKt" firstAttribute="top" secondItem="ebq-Ds-Cgc" secondAttribute="top" id="Yb9-7N-Yyf"/>
+                            <constraint firstAttribute="trailing" secondItem="Et6-ac-JKt" secondAttribute="trailing" id="Yib-R3-eYe"/>
+                            <constraint firstItem="p8H-aW-m3U" firstAttribute="top" secondItem="Et6-ac-JKt" secondAttribute="bottom" id="bfu-IL-hLp"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="900"/>
+                    <connections>
+                        <outlet property="passwordStackView" destination="9JT-5O-fZx" id="FFt-Ac-IJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eC6-NQ-Pyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-642"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cranbrook Logo" width="631" height="631"/>
         <image name="icons8-list" width="32" height="32"/>
         <image name="icons8-settings" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="mb4-CZ-VBC"/>
-    </inferredMetricsTieBreakers>
 </document>

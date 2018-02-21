@@ -30,16 +30,19 @@ class AccountController : UITableViewController {
     func performSignOut (url : String, parameters : [String : String]){
         Alamofire.request(url, method: .get, parameters: parameters).responseString 
     }
-    
+
     @IBAction func signOut(_ sender: UIButton) {
         let params : [String : String] = ["token" : UserDefaults.standard.string(forKey: "token")!]
         performSignOut(url: SIGN_OUT_URL, parameters: params)
-        performSegue(withIdentifier: "signOut", sender: nil)
+        performSegue(withIdentifier: "login", sender: nil)
     }
     
     @IBAction func inputID(_ sender: UIButton) {
-        
+        let loginVC = BlurPasswordLoginViewController();
+        loginVC.modalPresentationStyle = .overCurrentContext;
+        present(loginVC, animated: true, completion: nil)
     }
+    
 }
 
 extension AccountController: PasswordInputCompleteProtocol {

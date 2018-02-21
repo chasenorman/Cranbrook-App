@@ -16,6 +16,8 @@
 		198E7EE81F54769600255D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198E7EE61F54769600255D29 /* Main.storyboard */; };
 		198E7EF81F54769600255D29 /* CranbrookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7EF71F54769600255D29 /* CranbrookTests.swift */; };
 		198E7F031F54769600255D29 /* CranbrookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E7F021F54769600255D29 /* CranbrookUITests.swift */; };
+		19B0A97D203CB87F00D39A5E /* BlurPasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0A97C203CB87F00D39A5E /* BlurPasswordLoginViewController.swift */; };
+		19B0A97F203CB8DF00D39A5E /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0A97E203CB8DF00D39A5E /* Password.swift */; };
 		8705AA2A203659AE00B5FBF7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8705AA29203659AE00B5FBF7 /* Reachability.swift */; };
 		875513232037C8AD00AD9401 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875513222037C8AD00AD9401 /* AccountController.swift */; };
 		879A990A2037E12D002A72B6 /* appIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A99092037E12D002A72B6 /* appIcon.xcassets */; };
@@ -56,6 +58,8 @@
 		198E7EFE1F54769600255D29 /* CranbrookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CranbrookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		198E7F021F54769600255D29 /* CranbrookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CranbrookUITests.swift; sourceTree = "<group>"; };
 		198E7F041F54769600255D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B0A97C203CB87F00D39A5E /* BlurPasswordLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurPasswordLoginViewController.swift; sourceTree = "<group>"; };
+		19B0A97E203CB8DF00D39A5E /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		2A66966DB8D4B19AD5DF3C41 /* Pods-CranbrookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4411F7CA93F8FB62FD963DF7 /* Pods_Cranbrook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cranbrook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		660AC0A8AE8389EB3A352FF8 /* Pods-CranbrookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				198E7EE41F54769600255D29 /* HomeworkController.swift */,
 				1927B1B420312A4D007E7099 /* LoginController.swift */,
 				875513222037C8AD00AD9401 /* AccountController.swift */,
+				19B0A97C203CB87F00D39A5E /* BlurPasswordLoginViewController.swift */,
+				19B0A97E203CB8DF00D39A5E /* Password.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -521,6 +527,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B0A97F203CB8DF00D39A5E /* Password.swift in Sources */,
+				19B0A97D203CB87F00D39A5E /* BlurPasswordLoginViewController.swift in Sources */,
 				198E7EE51F54769600255D29 /* HomeworkController.swift in Sources */,
 				875513232037C8AD00AD9401 /* AccountController.swift in Sources */,
 				19277D8820367C2C0091F243 /* Homework.swift in Sources */,
