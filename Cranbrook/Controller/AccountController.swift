@@ -17,9 +17,16 @@ let SIGN_OUT_URL = "https://cranbrook.myschoolapp.com/api/authentication/logout/
 class AccountController : UITableViewController {
     let passwordContainerView = PasswordContainerView.create(withDigit: 7)
     
+    @IBOutlet weak var barcodeView: UIView!
+    static var staticBarcodeView: BarcodeView? = nil;
+    
     override func viewDidLoad() {
         passwordContainerView.delegate = self
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AccountController.staticBarcodeView = barcodeView as! BarcodeView;
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,15 +41,18 @@ class AccountController : UITableViewController {
     @IBAction func signOut(_ sender: UIButton) {
         let params : [String : String] = ["token" : UserDefaults.standard.string(forKey: "token")!]
         performSignOut(url: SIGN_OUT_URL, parameters: params)
-        performSegue(withIdentifier: "login", sender: nil)
+        self.tabBarController!.performSegue(withIdentifier: "login", sender: nil)
     }
     
     @IBAction func inputID(_ sender: UIButton) {
-        let loginVC = BlurPasswordLoginViewController();
+        let loginVC: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "BlurPasswordLoginViewController"))!
         loginVC.modalPresentationStyle = .overCurrentContext;
-        present(loginVC, animated: true, completion: nil)
+        present(loginVC, animated: true, completion: nil);
     }
     
+    static func reloadBarcode(){
+        AccountController.staticBarcodeView!.setNeedsDisplay();
+    }
 }
 
 extension AccountController: PasswordInputCompleteProtocol {

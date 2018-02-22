@@ -3,7 +3,9 @@ import SmileLock
 
 class MyPasswordModel {
     class func match(_ password: String) -> MyPasswordModel? {
-        guard password == "2060372" else { return nil }
+        //guard password == "2060372" else { return nil }
+        UserDefaults.standard.set(password, forKey: "studentid")
+        print(password);
         return MyPasswordModel()
     }
 }
@@ -18,12 +20,12 @@ class MyPasswordUIValidation: PasswordUIValidation<MyPasswordModel> {
     
     //handle Touch ID
     override func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: Error?) {
-        if success {
-            let dummyModel = MyPasswordModel()
-            self.success?(dummyModel)
-        } else {
+        //if success {
+            //let dummyModel = MyPasswordModel()
+            //self.success?(dummyModel)
+        //} else {
             passwordContainerView.clearInput()
-        }
+        //}
     }
 }
 
