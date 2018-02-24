@@ -135,7 +135,9 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
                         self.loading.stopAnimating();
                         self.tableView.reloadData();
                         self.noHomeworkLabel.isHidden = self.homework.count == 0 ? false : true;
+                        self.dispatchDelay(delay: 2.0){
                         self.tableView.refreshControl!.endRefreshing();
+                        }
                     }
                 }else{
                     LoginController.login(completionHandler: self.loginSuccess, loginErrorHandler: self.loginFailed, networkErrorHandler: self.networkError);
@@ -146,6 +148,10 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homework.count;
+    }
+    
+    func dispatchDelay(delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay, execute: closure)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
