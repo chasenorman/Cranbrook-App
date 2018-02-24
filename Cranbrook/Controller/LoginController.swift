@@ -35,9 +35,11 @@ class LoginController : UIViewController{
             ["username" : UserDefaults.standard.string(forKey: "username")!, "password" : UserDefaults.standard.string(forKey: "password")!, "InterfaceSource":"WebApp", "remember":false, "From":""] ).responseString {
             response in
             let responseJSON = response.result.value!
-            if responseJSON.range(of: "\"TokenId\":0") != nil
+                if responseJSON.range(of: "\"TokenId\":0") != nil
             {
                 UserDefaults.standard.set(responseJSON [responseJSON.index(responseJSON.startIndex, offsetBy: 10)..<responseJSON.index(responseJSON.endIndex, offsetBy: -31)], forKey: "token")
+                completionHandler();
+                UserDefaults.standard.set(responseJSON [responseJSON.index(responseJSON.startIndex, offsetBy: 69)..<responseJSON.index(responseJSON.endIndex, offsetBy: -1)], forKey: "userId")
                 completionHandler();
             }
             else {

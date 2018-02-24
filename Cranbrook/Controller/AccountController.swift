@@ -26,7 +26,7 @@ class AccountController : UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        AccountController.staticBarcodeView = barcodeView as! BarcodeView;
+        AccountController.staticBarcodeView = (barcodeView as! BarcodeView);
     }
     
     override func didReceiveMemoryWarning() {

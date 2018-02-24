@@ -335,7 +335,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5p-qQ-6cC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zLW-N6-aC1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-450.39999999999998" y="684.23645320197045"/>
+            <point key="canvasLocation" x="-713" y="559"/>
         </scene>
         <!--Blur Password Login View Controller-->
         <scene sceneID="Opq-95-08p">
