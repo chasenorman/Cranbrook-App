@@ -10,6 +10,8 @@ pod 'BRYXBanner'
 pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'SmileLock'
+pod 'SVProgressHUD'
+
 
   target 'CranbrookTests' do
     inherit! :search_paths

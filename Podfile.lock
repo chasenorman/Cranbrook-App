@@ -1,21 +1,27 @@
 PODS:
   - Alamofire (4.6.0)
   - BRYXBanner (0.8.0)
+  - CollapsibleTableSectionViewController (1.0.1)
   - SmileLock (3.0.2)
+  - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - BRYXBanner
+  - CollapsibleTableSectionViewController
   - SmileLock
+  - SVProgressHUD
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   BRYXBanner: 406c3775789136531da6f3c98058be2f16e08a34
+  CollapsibleTableSectionViewController: c41694de812a1039c5f8581c934cf0fc38e4e871
   SmileLock: c03dc80d208b33731606e996f5c3fed61255cf59
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 77c5ad00152b1ec244ea979321c858431047059a
+PODFILE CHECKSUM: 3e134765a1fbdcc32db1f5fe7d7cc6e82b0ab21c
 
 COCOAPODS: 1.4.0

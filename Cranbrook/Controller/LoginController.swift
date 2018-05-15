@@ -12,6 +12,7 @@ import UIKit
 import BRYXBanner
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 
 let LOGIN_URL = "https://cranbrook.myschoolapp.com/api/authentication/login/"
 
@@ -31,6 +32,7 @@ class LoginController : UIViewController{
             networkErrorHandler()
             return;
         }
+        //This entire Alamofire API request is done by me
         Alamofire.request(LOGIN_URL, method: .post, parameters:
             ["username" : UserDefaults.standard.string(forKey: "username")!, "password" : UserDefaults.standard.string(forKey: "password")!, "InterfaceSource":"WebApp", "remember":false, "From":""] ).responseString {
             response in
@@ -39,6 +41,7 @@ class LoginController : UIViewController{
             {
                 UserDefaults.standard.set(responseJSON [responseJSON.index(responseJSON.startIndex, offsetBy: 10)..<responseJSON.index(responseJSON.endIndex, offsetBy: -31)], forKey: "token")
                 completionHandler();
+                print(UserDefaults.standard.string(forKey: "token")!)
                 UserDefaults.standard.set(responseJSON [responseJSON.index(responseJSON.startIndex, offsetBy: 69)..<responseJSON.index(responseJSON.endIndex, offsetBy: -1)], forKey: "userId")
                 completionHandler();
             }
@@ -49,15 +52,18 @@ class LoginController : UIViewController{
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
+        SVProgressHUD.show()
         usernameField.isUserInteractionEnabled = false;
         passwordField.isUserInteractionEnabled = false;
-        loading.startAnimating();
+        //loading.startAnimating();
         UserDefaults.standard.set(self.usernameField.text!, forKey: "username");
         UserDefaults.standard.set(self.passwordField.text!, forKey: "password");
         LoginController.login(completionHandler: loginSuccess, loginErrorHandler: loginFailure, networkErrorHandler: networkError);
     }
     
+    //The error and network failure banners are also created by me
     func loginFailure(){
+        SVProgressHUD.dismiss()
         DispatchQueue.main.async{
             self.usernameField.isUserInteractionEnabled = true;
             self.passwordField.isUserInteractionEnabled = true;
@@ -80,6 +86,7 @@ class LoginController : UIViewController{
     }
     
     func loginSuccess(){
+        SVProgressHUD.dismiss()
         self.performSegue(withIdentifier: "enter", sender: self)
     }
 }

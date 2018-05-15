@@ -1,3 +1,5 @@
+//Created by Chase Norman using SmileLock
+
 import UIKit
 import SmileLock
 

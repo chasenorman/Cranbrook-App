@@ -34,6 +34,8 @@ class AccountController : UITableViewController {
         // Dispose of any resources that can be recreated
     }
     
+    //The basic setup of the static cells is created by me.
+    //Also, the sign-out Alamofire API request is done by me.
     func performSignOut (url : String, parameters : [String : String]){
         Alamofire.request(url, method: .get, parameters: parameters).responseString 
     }

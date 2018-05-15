@@ -3,6 +3,7 @@
 //  Cranbrook
 //
 //  Created by Chase Norman on 2/13/18.
+//  Edited by Aziz Zaynutdinov.
 //  Copyright © 2018 Chase Norman. All rights reserved.
 //
 
@@ -11,11 +12,13 @@ import UIKit
 
 class HomeworkCell: UITableViewCell{
     func homework(_ homework: Homework){
-        detailTextLabel!.text = "";
-        textLabel!.text = String(htmlEncodedString: homework.short_description);
-        if let l = homework.long_description{
-            detailTextLabel!.text = String(htmlEncodedString: l);
-        }
+        //This part is created by me,
+        detailTextLabel!.text = String(htmlEncodedString: homework.short_description);
+        textLabel!.text = String(htmlEncodedString: homework.groupname);
+        let endIndex = textLabel!.text?.index((textLabel!.text?.endIndex)!, offsetBy: -3)
+        var truncated = textLabel!.text?.substring(to: endIndex!)
+        textLabel!.text = truncated
+        //right until this point.
     }
 }
 

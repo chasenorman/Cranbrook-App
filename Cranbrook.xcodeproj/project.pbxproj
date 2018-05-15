@@ -20,8 +20,12 @@
 		19B0A97D203CB87F00D39A5E /* BlurPasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0A97C203CB87F00D39A5E /* BlurPasswordLoginViewController.swift */; };
 		19B0A97F203CB8DF00D39A5E /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0A97E203CB8DF00D39A5E /* Password.swift */; };
 		8705AA2A203659AE00B5FBF7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8705AA29203659AE00B5FBF7 /* Reachability.swift */; };
+		872EEE512051CC3E000719C7 /* Cranbrook Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872EEE502051CC3E000719C7 /* Cranbrook Launch Screen.storyboard */; };
 		875513232037C8AD00AD9401 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875513222037C8AD00AD9401 /* AccountController.swift */; };
 		879A990A2037E12D002A72B6 /* appIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A99092037E12D002A72B6 /* appIcon.xcassets */; };
+		87E6F55120AB136E00E701E4 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E6F55020AB136E00E701E4 /* ScheduleViewController.swift */; };
+		87E6F55320AB3FC400E701E4 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E6F55220AB3FC400E701E4 /* ScheduleCell.swift */; };
+		87E6F55520AB400200E701E4 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E6F55420AB400200E701E4 /* Schedule.swift */; };
 		8BFDDD5B8C718E9E25710CAD /* Pods_CranbrookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0774FEA19B2F0C8BF27DCD57 /* Pods_CranbrookUITests.framework */; };
 		9769675B09A095772B1693C0 /* Pods_Cranbrook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4411F7CA93F8FB62FD963DF7 /* Pods_Cranbrook.framework */; };
 /* End PBXBuildFile section */
@@ -67,8 +71,12 @@
 		660AC0A8AE8389EB3A352FF8 /* Pods-CranbrookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8705AA29203659AE00B5FBF7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		872EEE502051CC3E000719C7 /* Cranbrook Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Cranbrook Launch Screen.storyboard"; sourceTree = "<group>"; };
 		875513222037C8AD00AD9401 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		879A99092037E12D002A72B6 /* appIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = appIcon.xcassets; sourceTree = "<group>"; };
+		87E6F55020AB136E00E701E4 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		87E6F55220AB3FC400E701E4 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		87E6F55420AB400200E701E4 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		BCE8AC72A2E4D1681D6D9268 /* Pods-Cranbrook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cranbrook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook.release.xcconfig"; sourceTree = "<group>"; };
 		BF2706C958988131CE2F1F6C /* Pods-CranbrookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookTests/Pods-CranbrookTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4182CCFFFA9A8CD0494D785 /* Pods_CranbrookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CranbrookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +144,7 @@
 		198E7EE11F54769600255D29 /* Cranbrook */ = {
 			isa = PBXGroup;
 			children = (
+				87E767182052338E00293E68 /* Custom Cell */,
 				198E7EEE1F54769600255D29 /* Info.plist */,
 				87A0EAE420339C3300BB6DDB /* Supporting Files */,
 				87A0EAE320339C2700BB6DDB /* Model */,
@@ -180,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				198E7EE61F54769600255D29 /* Main.storyboard */,
+				872EEE502051CC3E000719C7 /* Cranbrook Launch Screen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,13 +197,11 @@
 		87A0EAE220339C1200BB6DDB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				198E7EE21F54769600255D29 /* AppDelegate.swift */,
 				198E7EE41F54769600255D29 /* HomeworkController.swift */,
 				1927B1B420312A4D007E7099 /* LoginController.swift */,
 				875513222037C8AD00AD9401 /* AccountController.swift */,
 				19B0A97C203CB87F00D39A5E /* BlurPasswordLoginViewController.swift */,
-				19B0A97E203CB8DF00D39A5E /* Password.swift */,
-				198C7D59203DDDF40051F011 /* Barcode.swift */,
+				87E6F55020AB136E00E701E4 /* ScheduleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,8 +210,10 @@
 			isa = PBXGroup;
 			children = (
 				1927B1B620331ED2007E7099 /* HomeworkCell.swift */,
+				87E6F55220AB3FC400E701E4 /* ScheduleCell.swift */,
 				8705AA29203659AE00B5FBF7 /* Reachability.swift */,
 				19277D8720367C2C0091F243 /* Homework.swift */,
+				87E6F55420AB400200E701E4 /* Schedule.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,9 +221,19 @@
 		87A0EAE420339C3300BB6DDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				198E7EE21F54769600255D29 /* AppDelegate.swift */,
+				19B0A97E203CB8DF00D39A5E /* Password.swift */,
+				198C7D59203DDDF40051F011 /* Barcode.swift */,
 				879A99092037E12D002A72B6 /* appIcon.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87E767182052338E00293E68 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 		FA82008B1EFB85D4EC5E5E4B /* Frameworks */ = {
@@ -349,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				879A990A2037E12D002A72B6 /* appIcon.xcassets in Resources */,
+				872EEE512051CC3E000719C7 /* Cranbrook Launch Screen.storyboard in Resources */,
 				198E7EE81F54769600255D29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +529,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Cranbrook/Pods-Cranbrook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BRYXBanner/BRYXBanner.framework",
+				"${BUILT_PRODUCTS_DIR}/CollapsibleTableSectionViewController/CollapsibleTableSectionViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SmileLock/SmileLock.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -515,6 +538,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRYXBanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollapsibleTableSectionViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SmileLock.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -539,6 +564,9 @@
 				1927B1B520312A4D007E7099 /* LoginController.swift in Sources */,
 				8705AA2A203659AE00B5FBF7 /* Reachability.swift in Sources */,
 				198C7D5A203DDDF40051F011 /* Barcode.swift in Sources */,
+				87E6F55120AB136E00E701E4 /* ScheduleViewController.swift in Sources */,
+				87E6F55320AB3FC400E701E4 /* ScheduleCell.swift in Sources */,
+				87E6F55520AB400200E701E4 /* Schedule.swift in Sources */,
 				198E7EE31F54769600255D29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,7 +730,7 @@
 				DEVELOPMENT_TEAM = MM934V475K;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrookapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -718,7 +746,7 @@
 				DEVELOPMENT_TEAM = MM934V475K;
 				INFOPLIST_FILE = Cranbrook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.cranbrookapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
