@@ -11,10 +11,11 @@ import UIKit
 
 class ScheduleCell: UITableViewCell{
     func schedule(_ schedule: Schedule){
-        textLabel!.text = String(htmlEncodedString: schedule.CourseTitle);
-        /*let endIndex = textLabel!.text?.index((textLabel!.text?.endIndex)!, offsetBy: -3)
+        textLabel!.text = String(htmlEncodedString: schedule.CourseTitle)
+        detailTextLabel!.text = String(htmlEncodedString: schedule.MyDayStartTime + "-" + schedule.MyDayEndTime)
+        let endIndex = textLabel!.text?.index((textLabel!.text?.endIndex)!, offsetBy: -3)
         var truncated = textLabel!.text?.substring(to: endIndex!)
-        textLabel!.text = truncated*/
+        textLabel!.text = truncated
     }
 }
 

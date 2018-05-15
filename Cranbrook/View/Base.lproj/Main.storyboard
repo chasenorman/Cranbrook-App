@@ -238,9 +238,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="G0Q-6G-Rjb" kind="show" identifier="login" id="Oih-mb-S5C"/>
+                        <segue destination="2oX-Yb-3Cf" kind="relationship" relationship="viewControllers" id="KsK-j9-GJA"/>
                         <segue destination="1U5-lJ-sBi" kind="relationship" relationship="viewControllers" id="XjU-9I-VVo"/>
                         <segue destination="vOX-uK-8pj" kind="relationship" relationship="viewControllers" id="ghX-tS-fQn"/>
-                        <segue destination="2oX-Yb-3Cf" kind="relationship" relationship="viewControllers" id="KsK-j9-GJA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYE-4E-ZQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>

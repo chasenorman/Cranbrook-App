@@ -137,26 +137,27 @@ class ScheduleController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func loginSuccess(){
-        dateChanged();
+        dateChanged()
     }
     
     func dateChanged(){
         DispatchQueue.main.async{
-            self.schedule = [];
-            self.loading.startAnimating();
-            self.dateLabel.text = self.readDate.string(from:self.selected);
+            self.schedule = []
+            self.loading.startAnimating()
+            self.dateLabel.text = self.readDate.string(from:self.selected)
             self.getSchedule(start: self.selected, end: self.selected)
         }
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        selected = Calendar.current.date(byAdding: .day, value: -1, to: selected)!;
-        dateChanged();
+        selected = Calendar.current.date(byAdding: .day, value: -1, to: selected)!
+        dateChanged()
     }
     
     @IBAction func forwardButtonPressed(_ sender: UIButton) {
         selected = Calendar.current.date(byAdding: .day, value: 1, to: selected)!
-        dateChanged();
+        dateChanged()
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

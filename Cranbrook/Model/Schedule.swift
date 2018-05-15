@@ -10,5 +10,7 @@ import Foundation
 
 struct Schedule: Decodable{
     let CourseTitle: String
+    let MyDayStartTime: String
+    let MyDayEndTime: String
 }
 
