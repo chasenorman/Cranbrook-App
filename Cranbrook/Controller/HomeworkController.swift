@@ -72,6 +72,7 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
         }
     
         let urlString = "https://cranbrook.myschoolapp.com/api/DataDirect/AssignmentCenterAssignments/?format=json&filter=1&dateStart=\(formatDate.string(from:start))&dateEnd=\(formatDate.string(from: end))&persona=2&statusList=&sectionList=";
+    print(formatDate.string(from: start))
         var request = URLRequest(url: URL(string: urlString)!);
         request.httpShouldHandleCookies = true;
         request.httpMethod = "GET";

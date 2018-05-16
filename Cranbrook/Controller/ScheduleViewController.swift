@@ -54,13 +54,13 @@ class ScheduleController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     //MARK: NETWORKING
-    func getSchedule(start: Date) {
+    func getSchedule(todaysDate: Date) {
         if Reachability.isConnectedToNetwork() == false{
             networkError()
             return;
         }
         
-        let urlString = "https://cranbrook.myschoolapp.com/api/schedule/MyDayCalendarStudentList/?scheduleDate=5%2F\(formatDate.string(from:start))%2F2018&personaId=2"
+        let urlString = "https://cranbrook.myschoolapp.com/api/schedule/MyDayCalendarStudentList/?scheduleDate=\(formatDate.string(from:todaysDate))&personaId=2"
         var request = URLRequest(url: URL(string: urlString)!);
         request.httpShouldHandleCookies = true;
         request.httpMethod = "GET";
@@ -122,7 +122,7 @@ class ScheduleController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     @objc func updateSchedule(refreshControl: UIRefreshControl) {
-        getSchedule(start: self.selected)
+        getSchedule(todaysDate: self.selected)
     }
     
     //MARK: Success and Error Handlers
@@ -145,7 +145,7 @@ class ScheduleController: UIViewController, UITableViewDelegate, UITableViewData
             self.schedule = []
             self.loading.startAnimating()
             self.dateLabel.text = self.readDate.string(from:self.selected)
-            self.getSchedule(start: self.selected)
+            self.getSchedule(todaysDate: self.selected)
         }
     }
     
