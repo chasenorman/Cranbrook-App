@@ -21,6 +21,7 @@
 		19B0A97F203CB8DF00D39A5E /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0A97E203CB8DF00D39A5E /* Password.swift */; };
 		8705AA2A203659AE00B5FBF7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8705AA29203659AE00B5FBF7 /* Reachability.swift */; };
 		872EEE512051CC3E000719C7 /* Cranbrook Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872EEE502051CC3E000719C7 /* Cranbrook Launch Screen.storyboard */; };
+		8734193720AC6A290089A464 /* Array+SafeNilChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734193620AC6A290089A464 /* Array+SafeNilChecking.swift */; };
 		875513232037C8AD00AD9401 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875513222037C8AD00AD9401 /* AccountController.swift */; };
 		879A990A2037E12D002A72B6 /* appIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879A99092037E12D002A72B6 /* appIcon.xcassets */; };
 		87E6F55120AB136E00E701E4 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E6F55020AB136E00E701E4 /* ScheduleViewController.swift */; };
@@ -72,6 +73,7 @@
 		76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CranbrookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CranbrookUITests/Pods-CranbrookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8705AA29203659AE00B5FBF7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		872EEE502051CC3E000719C7 /* Cranbrook Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Cranbrook Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8734193620AC6A290089A464 /* Array+SafeNilChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SafeNilChecking.swift"; sourceTree = "<group>"; };
 		875513222037C8AD00AD9401 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		879A99092037E12D002A72B6 /* appIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = appIcon.xcassets; sourceTree = "<group>"; };
 		87E6F55020AB136E00E701E4 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		198E7ED61F54769600255D29 = {
 			isa = PBXGroup;
 			children = (
+				8734193820AC6A300089A464 /* Extensions */,
 				198E7EE11F54769600255D29 /* Cranbrook */,
 				198E7EF61F54769600255D29 /* CranbrookTests */,
 				198E7F011F54769600255D29 /* CranbrookUITests */,
@@ -183,6 +186,14 @@
 				76B941A6E079684933D82D98 /* Pods-CranbrookUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8734193820AC6A300089A464 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8734193620AC6A290089A464 /* Array+SafeNilChecking.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		87A0EAE120339BFD00BB6DDB /* View */ = {
@@ -561,6 +572,7 @@
 				875513232037C8AD00AD9401 /* AccountController.swift in Sources */,
 				19277D8820367C2C0091F243 /* Homework.swift in Sources */,
 				1927B1B720331ED2007E7099 /* HomeworkCell.swift in Sources */,
+				8734193720AC6A290089A464 /* Array+SafeNilChecking.swift in Sources */,
 				1927B1B520312A4D007E7099 /* LoginController.swift in Sources */,
 				8705AA2A203659AE00B5FBF7 /* Reachability.swift in Sources */,
 				198C7D5A203DDDF40051F011 /* Barcode.swift in Sources */,

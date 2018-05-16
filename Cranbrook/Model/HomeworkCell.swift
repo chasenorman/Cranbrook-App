@@ -12,13 +12,11 @@ import UIKit
 
 class HomeworkCell: UITableViewCell{
     func homework(_ homework: Homework){
-        //This part is created by me,
         detailTextLabel!.text = String(htmlEncodedString: homework.short_description);
         textLabel!.text = String(htmlEncodedString: homework.groupname);
         let endIndex = textLabel!.text?.index((textLabel!.text?.endIndex)!, offsetBy: -3)
         var truncated = textLabel!.text?.substring(to: endIndex!)
         textLabel!.text = truncated
-        //right until this point.
     }
 }
 

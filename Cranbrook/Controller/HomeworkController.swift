@@ -215,8 +215,8 @@ class HomeworkController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeworkCell;
-        cell.homework(homework[indexPath.row]);
-        cell.backgroundColor = finished[indexPath.row];
+        cell.homework(homework[safe: indexPath.row]!)
+        cell.backgroundColor = finished[safe: indexPath.row]
         return cell
     }
     

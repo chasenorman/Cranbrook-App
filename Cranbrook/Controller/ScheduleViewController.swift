@@ -6,6 +6,7 @@ import SVProgressHUD
 
 class ScheduleController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
     // MARK: Variables and Constants
     var schedule: [Schedule] = []
     var finished: [UIColor] = []
@@ -170,13 +171,14 @@ class ScheduleController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "schedulecell", for: indexPath) as! ScheduleCell
-        cell.schedule(schedule[indexPath.row])
-        cell.backgroundColor = finished[indexPath.row]
+        cell.schedule(schedule[safe: indexPath.row]!)
+        cell.backgroundColor = finished[safe: indexPath.row]
         return cell
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
 }
 
