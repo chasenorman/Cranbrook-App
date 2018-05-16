@@ -167,9 +167,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJf-hP-OTl">
-                                <rect key="frame" x="16" y="61" width="30" height="30"/>
-                                <state key="normal" title="&lt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJf-hP-OTl">
+                                <rect key="frame" x="16" y="61" width="44" height="32"/>
+                                <state key="normal" title="&lt;" image="icons8-left_4-1"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="1U5-lJ-sBi" eventType="touchUpInside" id="VdK-49-CeS"/>
                                 </connections>
@@ -184,9 +184,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sle-Yr-UTx">
-                                <rect key="frame" x="329" y="61" width="30" height="30"/>
-                                <state key="normal" title="&gt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sle-Yr-UTx">
+                                <rect key="frame" x="315" y="61" width="44" height="32"/>
+                                <state key="normal" title="&gt;" image="icons8-right_4-1"/>
                                 <connections>
                                     <action selector="forwardButtonPressed:" destination="1U5-lJ-sBi" eventType="touchUpInside" id="UeA-ht-NBL"/>
                                 </connections>
@@ -218,7 +218,7 @@
                             <constraint firstItem="ZJf-hP-OTl" firstAttribute="leading" secondItem="mtN-Uc-5ip" secondAttribute="leadingMargin" id="va1-UU-oLA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Homework" image="icons8-list" id="Tsz-l9-AF8"/>
+                    <tabBarItem key="tabBarItem" title="Homework" image="icons8-list-1" selectedImage="icons8-list-1" id="Tsz-l9-AF8"/>
                     <connections>
                         <outlet property="dateLabel" destination="4tU-Op-RAO" id="xKs-pj-Ew8"/>
                         <outlet property="loading" destination="shg-tg-6Bc" id="yh8-51-SlF"/>
@@ -331,7 +331,7 @@
                             <outlet property="delegate" destination="vOX-uK-8pj" id="mva-4s-Esb"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings" id="RVd-mW-gvS"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-1" selectedImage="icons8-settings-1" id="RVd-mW-gvS"/>
                     <connections>
                         <outlet property="barcodeView" destination="PZI-oW-0qr" id="egV-jB-zeO"/>
                     </connections>
@@ -473,9 +473,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNj-e8-JaK">
-                                <rect key="frame" x="16" y="61" width="30" height="30"/>
-                                <state key="normal" title="&lt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNj-e8-JaK">
+                                <rect key="frame" x="16" y="61" width="44" height="32"/>
+                                <state key="normal" title="&lt;" image="icons8-left_4-1"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="2oX-Yb-3Cf" eventType="touchUpInside" id="CnG-hR-zER"/>
                                 </connections>
@@ -490,9 +490,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3I1-ZC-VeJ">
-                                <rect key="frame" x="329" y="61" width="30" height="30"/>
-                                <state key="normal" title="&gt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3I1-ZC-VeJ">
+                                <rect key="frame" x="315" y="61" width="44" height="32"/>
+                                <state key="normal" title="&gt;" image="icons8-right_4-1"/>
                                 <connections>
                                     <action selector="forwardButtonPressed:" destination="2oX-Yb-3Cf" eventType="touchUpInside" id="inz-pC-gV8"/>
                                 </connections>
@@ -524,7 +524,7 @@
                             <constraint firstItem="iRd-nR-lic" firstAttribute="top" secondItem="tYU-tZ-8Aa" secondAttribute="top" constant="103" id="pdb-lg-7Le"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" image="icons8-list" id="p82-nN-yhY"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="icons8-calendar-1" selectedImage="icons8-calendar-1" id="p82-nN-yhY"/>
                     <connections>
                         <outlet property="dateLabel" destination="PF8-dB-cMf" id="hzW-Pf-nbB"/>
                         <outlet property="loading" destination="qRI-Hj-MTU" id="lBT-tK-QfR"/>
@@ -539,7 +539,10 @@
     </scenes>
     <resources>
         <image name="Cranbrook Logo" width="631" height="631"/>
-        <image name="icons8-list" width="32" height="32"/>
-        <image name="icons8-settings" width="32" height="32"/>
+        <image name="icons8-calendar-1" width="32" height="32"/>
+        <image name="icons8-left_4-1" width="32" height="32"/>
+        <image name="icons8-list-1" width="32" height="32"/>
+        <image name="icons8-right_4-1" width="32" height="32"/>
+        <image name="icons8-settings-1" width="32" height="32"/>
     </resources>
 </document>
